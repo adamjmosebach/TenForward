@@ -1,8 +1,4 @@
-# PROJECT 4 README <!-- omit in toc -->
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+# PROJECT 4 
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -31,33 +27,27 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
 _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- User should be able to create, read, update, and delete posts relating to Star Trek
+- Each post should also be associated with a specific category that their post falls into (to be designated by the user)
+- Polished design
+- Responsive Design for at least three sizes of screen
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      react       | The umbrella library for the entire front-end |
+|   react router   | Specifies which routes call which components |
+| react-router-dom | Allows Links within the components |
+|      axios       | Makes calls to the database |
 
 <br>
 
