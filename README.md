@@ -1,5 +1,7 @@
 # PROJECT 4 
 
+<br>
+
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -27,14 +29,13 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 
 ## MVP
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
 <br>
 
 ### Goals
 
 - User should be able to create, read, update, and delete posts relating to Star Trek
 - Each post should also be associated with a specific category that their post falls into (to be designated by the user)
+- User should have the ability to comment on posts
 - Polished design
 - Responsive Design for at least three sizes of screen
 
@@ -42,7 +43,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                |
+|Library/Dependency| Description                                |
 | :--------------: | :----------------------------------------- |
 |      react       | The umbrella library for the entire front-end |
 |   react router   | Specifies which routes call which components |
@@ -56,6 +57,12 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 #### Wireframes
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+
+
+
+[Whimsical Diagram](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
+
+
 
 ![Dummy Link](url)
 
@@ -133,7 +140,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+[ERD can be found here](https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=ERD.drawio#R7Vptc5s4EP41%2FtgMAuOXjzWx25k6PU%2Fa6%2FU%2BdRQjY00BeYT8dr%2F%2BVkgyYOwYEuM4TWY8ibQsC9rn2dUu0HK8aPOJ48X8jvkkbNmWv2k5ty3bRla%2FD%2F%2BkZKsknT5SgoBTXytlgm%2F0P2LO1NIl9UlSUBSMhYIuisIpi2MyFQUZ5pyti2ozFhavusABKQm%2BTXFYlv5DfTFX0p5rZfLPhAZzc2Vk6SMRNspakMyxz9YFEdmIEYuFvsUJ4RGOSSzgyB3mvwlvucO5EHKlH1v2CH4zqX0TMBaEBC9ocjNlEYinCaiMZjiioXRzztBAG4LLOcOW43HGhBpFG4%2BEEisDg7qn0ZGjOz9wabfCCd6H1Xb82xLx57XzQ9zdBZPuwwdtZYXDpfav9o3YGocTH%2Fyvp3ApKrb3JMSCsniYHRmQ2P8o0QWl4T0sFpY9SATmIpOyWCuOKNyYc2sZldycbKj4CWOkx%2F9K%2BU237%2Bj57SaneLvNTcDHNCICXKtlseDbn%2FmJsuWaaWYqne1sxYb0yDU3mBeU3a59mLAln5JHfG13dbhgHhDxiKKjyegXIkGj%2BokwWCbfgsI64%2F%2BO5fM8942Qp4CtihGENcuDncHdNSaMpqTXScNpazs6ZXRNuBgTaun6rDwF9wy19wx19g0p15QMwSC38EyUMrwO2%2B16dGdczFnAYhw2QfWnElSHiHXT7vVzYYKeECIvTnXUvjKuo26Rojvu1%2BZ6p2jIttyLcr1MdQ8LEjBOYffeJz1shQs5FPghpXieCo6kCuzmAtM4pQ5K52GIFwlN1ZVkTkN%2FjLdsKYwhMxvM6Ib492rrl7oQJmMwlmgeyk3UhJw8jEMaxDCeAu%2FkFQecJHAvY5wIrXGUmSvCBdk8yiSDj1vEB5lclGOa7R5gWt86zqkCiHURc04nJ4MTrFxQHN5DgYXjIIWsiIh0q8%2FZ4rsJQClYSK4RPlwRVeKkvoeE5LGQSWBjlbZStXRx7gB%2BsFxPZiUXbsCDOcrm8JPqXHgsTgTHNEWDAE5rIrEaCLbQ1wnJzNwG176U4wcmBFRMx1B9lNmnoTYxXBFZpylk2yVkJ1%2FqYMtgrbMw3Vvm1PdJrCJS1tc4w%2FsAlAf9v%2FP5Phj7cVgRD6cyHjkAnEv63y35H9Svz%2F8m7yndQbLAUxoHY3VmZw%2Bgwxv0MwHatI4GjH1JwDpvORVaDabCzkunwu6zkL1QIFb0fqey918q8fVK3o5xRFJ3c0gtMPj613f59%2B%2Fx%2BApxOJkQzw7UtSRAu1wMTlgi3it3ONI7Xbij%2FqEWsdcYWuUC7w3tV3VK9%2BqlyPHa%2FSC4zUViuXj8k4r3HXWvdxOzy9Xgmyrfa0B0fPtCnYtC9rwy75UnxDoFfO2EeKCCP7zb7T9bPx%2B45aqyJWPUQWrhTxqOrjGnVgWxWxnEEzm0QdD6JdBkZahebppu4BAwgoqQnNChUfBrycMTWlP1%2FHn7S2ZvSz0sf93tRz6hW%2BcnS81s3hx5ULkb8VgUpan3vSGxnb1XCU6v4lOWxl4loPeGpFo0onM0JJd9gob%2B7IYEXX9Dgt54Q1IDomt5nobeG5KmEuKLv1JA5X7kNXcT6GzdRHMer9JMvPLa%2FvxoNZ8LYZp9T6o%2BJMo%2BAnaG%2FwM%3D)
 
 <br>
 
@@ -141,7 +148,11 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Login/Auth
+- Ability to 'like' posts
+- View posts by category
+- View all posts by a specific user
+
 
 ***
 
