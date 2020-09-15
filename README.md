@@ -62,7 +62,7 @@
 
 Landing Page
 
-![Landing Page]()
+![Landing Page](https://i.imgur.com/GoVXK4r.png)
 
 Register
 
@@ -163,17 +163,17 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    NavBar   | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  SideBar  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   ProfileCard    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| PostCard| functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Landing    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    CreatePost    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    PostDetail    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    EditDeletePost    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    Login    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    Register    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    Profile    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    NavBar   | functional |   n   |   n   | Name of site, logo, 'create post' button               |
+|  SideBar  | functional |   y   |   n   | Either Guinan or your profile       |
+|   MainContainer    |   functional    |   y   |   n   | Axios call, passing down props     |
+|   ProfileCard    |   functional    |   n   |   y   | Displays your profile information     |
+| PostCard | functional |   n   |   y   | Post information and comments                |
+|    Landing    | functional |   n   |   y   | Displays all posts and comments |
+|    CreatePost    | functional |   y   |   n   | Create a post |
+|    PostDetail    | functional |   y   |   n   | Details on a specific post |
+|    EditDeletePost    | functional |   y   |   y   | Edit or delete a post |
+|    Login    | functional |   y   |   n   | Log into your profile |
+|    Register    | functional |   y   |   n   | Register for the site |
 
 #### Time Estimates
 
