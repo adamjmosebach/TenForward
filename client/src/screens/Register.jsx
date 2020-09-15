@@ -77,6 +77,7 @@ export default function Register(props) {
       <label>
         Division
         <select name='division' id='division' onChange={handleChange}>
+          <option value='' disabled selected>--Select Division--</option>
           <option value='command'>Command</option>
           <option value='operations'>Operations</option>
           <option value='science'>Science</option>
