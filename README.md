@@ -90,7 +90,7 @@
 
 #### Component Tree
 
-##### Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
+##### - Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
 
 ![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png)
 
@@ -103,12 +103,33 @@
 src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ NavBar.jsx
+      |__ SideBar.jsx
+      |__ ProfileCard.jsx
+      |__ PostCard.jsx
 |__ services/
+      |__ api-config.js
+      |__ auth.js
+      |__ users.js
+      |__ posts.js
+      |__ comments.js
+|__ screens/
+      |__ Landing.jsx
+      |__ CreatePost.jsx
+      |__ PostDetail.jsx
+      |__ EditDeletePost.jsx
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ Profile.jsx
+|__ layouts/
+      |__ Layout.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ App.js
+|__ index.js
+      
 
 ```
 
