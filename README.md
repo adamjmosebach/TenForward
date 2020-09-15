@@ -90,7 +90,7 @@
 
 #### Component Tree
 
-##### [Whimsical Diagram can be found here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
+##### Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
 
 ![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png)
 
