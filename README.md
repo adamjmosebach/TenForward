@@ -32,6 +32,7 @@
 
 ### Goals
 
+- User should be able to log in to their own account
 - User should be able to create, read, update, and delete posts relating to Star Trek
 - User should have the ability to comment on posts
 - Every few posts, the user increases in Starfleet rank
@@ -130,7 +131,6 @@ src
 |__ App.js
 |__ index.js
       
-
 ```
 
 #### Component Breakdown
@@ -171,9 +171,8 @@ src
 
 ## Post-MVP
 
-- Login/Auth
-- Each post should also be associated with a specific category that their post falls into (to be designated by the user)
-- View posts by category
+- Each post could be associated with a specific category/hashtag
+- View posts by category/hashtag
 - View all posts by a specific user
 - Ability to 'like' posts
 
@@ -182,8 +181,8 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> I will use this section to include a brief code snippet of functionality that I am proud of and a brief description.
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> I will use this section to list of all major issues/changes encountered and their resolution.
