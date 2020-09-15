@@ -209,6 +209,7 @@ src
 - View all posts by a specific user
 - Ability to 'like' posts
 - The Enterprise warping across screen on load
+- Image uploading (as opposed to image_url)
 
 
 ***
