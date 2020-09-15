@@ -190,8 +190,7 @@ src
 | *Category View    |    L     |     2 hrs      |    -   |   -   |
 | *Increase Rank    |    L     |     1 hrs      |     -     |    -    |
 | *Views by User    |    L     |     2 hrs      |     -   |    -    |
-| TOTAL               |   P-MVP time: 7 hrs       |     MVP time: 44.5 hrs      |     -     |    -    |
-*Denotes Post-MVP
+| TOTAL               |   *P-MVP: 7 hrs       |     MVP: 44.5 hrs      |     -     |    -    |
 
 <br>
 
