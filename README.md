@@ -53,33 +53,39 @@
 
 <br>
 
-### Client (Front End)
+# Client (Front End)
 
-#### Wireframes
+## Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-
-
-[Whimsical Diagram](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
+### Desktop
 
 
+Landing Page
 
-![Dummy Link](url)
+![Landing Page]()
 
-- Desktop Landing
+Register
 
-![Dummy Link](url)
+![Register](https://i.imgur.com/wIGHNnd.png)
 
-- Desktop Hero
+Create Post
 
-![Dummy Link](url)
+![Create Post](https://i.imgur.com/gESF7LE.png)
 
-- Resource Index
+Post Detail
 
-![Dummy Link](url)
+![Post Detail](https://i.imgur.com/j92eEQ2.png)
 
-- #### Mobile
+Update/Delete
+
+![Update/Delete](https://i.imgur.com/KvowWex.png)
+
+Profile
+
+![Profile](https://i.imgur.com/axhXIi2.png)
+
+
+### Mobile
 
 Landing Page
 
