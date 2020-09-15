@@ -35,7 +35,6 @@
 - User should be able to log in to their own account
 - User should be able to create, read, update, and delete posts relating to Star Trek
 - User should have the ability to comment on posts
-- Every few posts, the user increases in Starfleet rank
 - Utilize at least three tables in a Rails database, with a React front-end
 - Polished design
 - Responsive Design for at least three sizes of screen
@@ -159,8 +158,6 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    NavBar   | functional |   n   |   n   | Name of site, logo, 'create post' button               |
@@ -177,15 +174,24 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+|  Setup back end file structure   |     L   |     2 hrs      |     -     |    -    |
+| Nav    |    M     |     3 hrs      |    -     |    -   |
+| Screens    |    M     |     4 hrs      |     -    |    -    |
+| Back end CRUD    |    H     |     7 hrs      |    -    |    -    |
+|  Setup front end file structure   |    L     |     2 hrs      |    -     | -    |
+| Front end CRUD    |    H     |     6 hrs      |    -    |    -   |
+| Comments working    |    H     |     3.5 hrs      |     -    |   -   |
+| Auth   |    H     |     3 hrs      |     3 hrs     |    -   |
+| CSS    |    M     |     3 hrs      |     10 hrs     |   -   |
+| Responsive Design    |    M     |     4 hrs      |     -   |   -   |
+| *Implementing Categories    |    L     |     2 hrs      |     -     |   -   |
+| *Category View    |    L     |     2 hrs      |    -   |   -   |
+| *Increase Rank    |    L     |     1 hrs      |     -     |    -    |
+| *Views by User    |    L     |     2 hrs      |     -   |    -    |
+| TOTAL               |          |     51.5 hrs      |     -     |    -    |
+*Denotes Post-MVP
 
 <br>
 
@@ -201,6 +207,7 @@ src
 
 ## Post-MVP
 
+- Every few posts, the user increases in Starfleet rank
 - Each post could be associated with a specific category/hashtag
 - View posts by category/hashtag
 - View all posts by a specific user
