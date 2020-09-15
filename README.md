@@ -79,13 +79,16 @@
 
 ![Dummy Link](url)
 
-- Resource Show
+- Mobile
 
-![Dummy Link](url)
+![Landing Page](https://i.imgur.com/h3oqD87.png)
 
-- Tablet Resource Index
+![Register](https://i.imgur.com/fm9uRXC.png)
 
-![Dummy Link](url)
+![Create Post](https://i.imgur.com/eBgkpQn.png)
+
+![Post Detail](https://i.imgur.com/bM4HnAu.png)
+
 
 - Mobile Resource Index
 
@@ -139,11 +142,17 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    NavBar   | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|  SideBar  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
+|   ProfileCard    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
+| PostCard| functional |   n   |   y   | _The cards will render the post info via props._                 |
+|    Landing    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    CreatePost    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    PostDetail    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    EditDeletePost    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Login    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Register    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Profile    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Time Estimates
 
@@ -163,7 +172,7 @@ src
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/G1Jh0HE.png)
+![ERD](https://i.imgur.com/7R3ojgX.png)
 
 <br>
 
