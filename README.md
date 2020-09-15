@@ -180,8 +180,8 @@ src
 |  Setup front end file structure   |    L     |     2 hrs      |    -     | -    |
 | Front end CRUD    |    H     |     6 hrs      |    -    |    -   |
 | Comments working    |    H     |     3.5 hrs      |     -    |   -   |
-| Auth   |    H     |     3 hrs      |          |    -   |
-| CSS    |    M     |     10 hrs      |         |   -   |
+| Auth   |    H     |     3 hrs      |     -     |    -   |
+| CSS    |    M     |     10 hrs      |    -     |   -   |
 | Responsive Design    |    M     |     4 hrs      |     -   |   -   |
 | *Implementing Categories    |    L     |     2 hrs      |     -     |   -   |
 | *Category View    |    L     |     2 hrs      |    -   |   -   |
