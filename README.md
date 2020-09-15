@@ -82,22 +82,28 @@
 - #### Mobile
 
 Landing Page
+
 ![Landing Page](https://i.imgur.com/h3oqD87.png)
 
 Register
+
 ![Register](https://i.imgur.com/fm9uRXC.png)
 
 Create Post
+
 ![Create Post](https://i.imgur.com/SmvhsPF.png)
 
 Post Detail
+
 ![Post Detail](https://i.imgur.com/bM4HnAu.png)
 
 Update/Delete
+
 ![Update/Delete](https://i.imgur.com/wAdBwe8.png)
 
 Profile
-![Profile](https://i.imgur.com/u4R7CHd.png)
+
+![Profile](https://i.imgur.com/A66ngvG.png)
 
 
 
