@@ -34,6 +34,8 @@
 
 - User should be able to create, read, update, and delete posts relating to Star Trek
 - User should have the ability to comment on posts
+- Every few posts, the user increases in Starfleet rank
+- Utilize at least three tables in a Rails database, with a React front-end
 - Polished design
 - Responsive Design for at least three sizes of screen
 
@@ -88,7 +90,9 @@
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+##### [Whimsical Diagram can be found here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
+
+![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png)
 
 #### Component Hierarchy
 
@@ -138,7 +142,7 @@ src
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/atAiEZ5.png)
+![ERD](https://i.imgur.com/G1Jh0HE.png)
 
 <br>
 
