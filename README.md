@@ -27,7 +27,6 @@
 <br>
 
 ## MVP
-
 <br>
 
 ### Goals
@@ -52,9 +51,9 @@
 
 <br>
 
-# Client (Front End)
+## Client (Front End)
 
-## Wireframes
+### Wireframes
 
 ### Desktop
 
@@ -112,15 +111,13 @@ Profile
 
 
 
-#### Component Tree
+### Component Tree
 
-##### - Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q)
+##### - Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q) -
 
 ![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png)
 
-#### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+### Component Hierarchy
 
 ``` structure
 
@@ -156,7 +153,7 @@ src
       
 ```
 
-#### Component Breakdown
+### Component Breakdown
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
@@ -172,7 +169,7 @@ src
 |    Login    | functional |   y   |   n   | Log into your profile |
 |    Register    | functional |   y   |   n   | Register for the site |
 
-#### Time Estimates
+### Time Estimates
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -194,9 +191,9 @@ src
 
 <br>
 
-### Server (Back End)
+## Server (Back End)
 
-#### ERD Model
+### ERD Model
 
 ![ERD](https://i.imgur.com/7R3ojgX.png)
 
