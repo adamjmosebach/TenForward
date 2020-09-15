@@ -22,8 +22,7 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+**TenForward** is a virtual lounge where Star Trek fans can go and exchange memes, pose questions, start discussions, and generally hang out in a place surrounded by like-minded people.  Or aliens.  Either way.  
 
 <br>
 
@@ -34,7 +33,6 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 ### Goals
 
 - User should be able to create, read, update, and delete posts relating to Star Trek
-- Each post should also be associated with a specific category that their post falls into (to be designated by the user)
 - User should have the ability to comment on posts
 - Polished design
 - Responsive Design for at least three sizes of screen
@@ -140,7 +138,7 @@ src
 
 #### ERD Model
 
-![https://i.imgur.com/1u6yBo2.png](https://i.imgur.com/1u6yBo2.png)
+!(https://i.imgur.com/atAiEZ5.png)
 
 <br>
 
@@ -149,9 +147,10 @@ src
 ## Post-MVP
 
 - Login/Auth
-- Ability to 'like' posts
+- Each post should also be associated with a specific category that their post falls into (to be designated by the user)
 - View posts by category
 - View all posts by a specific user
+- Ability to 'like' posts
 
 
 ***
