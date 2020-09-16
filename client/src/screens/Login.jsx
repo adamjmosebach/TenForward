@@ -2,27 +2,32 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Login(props) {
+  const { loginSubmit } = props;
+
   const [formData, setFormData] = useState({
     username: '',
-    password: ''
-  })
+    password: '',
+  });
   const { username, password } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   return (
-    <form onSubmit={(e)=> {
-      e.preventDefault();
-      props.loginSubmit(formData);
-    }}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        loginSubmit(formData);
+      }}
+    >
       <h3>Login</h3>
-      <label>Username:
+      <label>
+        Username:
         <input
           type='text'
           name='username'
@@ -31,7 +36,8 @@ export default function Login(props) {
         />
       </label>
       <br />
-      <label>Password:
+      <label>
+        Password:
         <input
           type='password'
           name='password'
@@ -43,5 +49,5 @@ export default function Login(props) {
       <Link to='/register'>Register</Link>
       <button>Submit</button>
     </form>
-  )
+  );
 }
