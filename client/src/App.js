@@ -18,6 +18,7 @@ import MainContainer from './containers/MainContainer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [fromCreate, setFromCreate] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -32,13 +33,17 @@ function App() {
   const loginSubmit = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    fromCreate ?
+      history.push('/posts/create')
+      : history.push('/')
   };
 
   const registerSubmit = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    fromCreate ?
+    history.push('/posts/create')
+    : history.push('/')
   };
 
   const handleLogout = () => {
@@ -50,7 +55,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Layout>
+      <Layout setFromCreate={setFromCreate}>
         <div className='all-not-nav'>
           <SideBar currentUser={currentUser} handleLogout={handleLogout} />
           <Switch>
@@ -61,7 +66,7 @@ function App() {
               <Register registerSubmit={registerSubmit} />
             </Route>
             <Route path='/'>
-              <MainContainer currentUser={currentUser} />
+              <MainContainer currentUser={currentUser} setFromCreate={setFromCreate}/>
             </Route>
           </Switch>
         </div>
