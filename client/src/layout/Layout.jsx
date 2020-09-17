@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { verifyUser } from '../services/auth';
 
 export default function Layout(props) {
-  const { setFromCreate } = props;
-  const [currentUser, setCurrentUser] = useState(null);
-  const handleVerify = async () => {
-    const userData = await verifyUser();
-    setCurrentUser(userData);
-  };
-  handleVerify();
+  const { setFromCreate, currentUser } = props;
 
   return (
     <div>
