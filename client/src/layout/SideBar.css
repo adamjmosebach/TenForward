@@ -3,3 +3,12 @@
   height: 90vh;
   border: 2px solid black;
 }
+.profile-image-container {
+  width: 60%;
+}
+.profile-image {
+  width: 100%;
+}
+.guinan-pic {
+  width: 80%;
+}
