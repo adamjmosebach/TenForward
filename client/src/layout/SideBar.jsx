@@ -10,6 +10,10 @@ export default function SideBar(props) {
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
+          <p>Rank: {currentUser.rank}</p>
+          <div className='profile-image-container'>
+            <img src={currentUser.img_url} alt="user's picture" className='profile-image'/>
+          </div>
           <button onClick={props.handleLogout}>logout</button>
         </div>
       ) : (
