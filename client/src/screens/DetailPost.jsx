@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useHistory } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
+import { postComment } from '../services/comments'
 
 export default function DetailPost(props) {
   const { currentUser } = props;
   const { id } = useParams();
   const [thePost, setThePost] = useState(null);
+  const [newComment, setNewComment] = useState('');
+  const history = useHistory()
 
   useEffect(() => {
     const fetchOnePost = async (id) => {
@@ -14,6 +17,20 @@ export default function DetailPost(props) {
     };
     fetchOnePost(id);
   }, []);
+
+  const handleCommentChange = (e) => {
+    setNewComment({
+      content: e.target.value,
+      post_id: thePost.id,
+      user_id: currentUser.id,
+    });
+  };
+
+  const handleCommentSubmit = async () => {
+    const postWithComments = await postComment(thePost.id, newComment);
+    setNewComment('')
+    history.push(`/posts/${thePost.id}`)
+  }
 
   if (thePost) {
     return (
@@ -25,11 +42,20 @@ export default function DetailPost(props) {
         <div className='post-image-container'>
           <img src={thePost.img_url} className='post-image' />
         </div>
+        {thePost.comments &&
+          thePost.comments.map(comment => <p>{comment.content}</p>)
+        }
         {currentUser && thePost.user_id === currentUser.id && (
           <Link to={`/posts/${thePost.id}/edit`}>
             <button>Edit this Post</button>
           </Link>
         )}
+        <form onSubmit={handleCommentSubmit}>
+          <textarea name='comment' onChange={(e) => handleCommentChange(e)} />
+          {/* <Link to={`/posts/${thePost.id}/comments/create`}> */}
+          <button>Make A Comment</button>
+          {/* </Link> */}
+        </form>
       </div>
     );
   } else {

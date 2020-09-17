@@ -17,7 +17,6 @@ export default function PostCard(props) {
         {currentUser && post.user_id === currentUser.id &&
           <Link to={`/posts/${post.id}/edit`}><button>Edit this Post</button></Link>
         }
-        <button>Make A Comment</button>
         <Link to={`/posts/${post.id}`}><button>See Comments</button></Link>
       </div>
     );
