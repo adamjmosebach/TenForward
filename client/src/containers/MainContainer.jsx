@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { getAllPosts, postPost, updatePost, deletePost } from '../services/posts';
+import {
+  getAllPosts,
+  postPost,
+  updatePost,
+  deletePost,
+} from '../services/posts';
 import CreatePost from '../screens/CreatePost';
 import Posts from '../screens/Posts';
 import EditPost from '../screens/EditPost';
 import DetailPost from '../screens/DetailPost';
+import EditProfile from '../screens/EditProfile';
 import './MainContainer.css';
 
 export default function MainContainer(props) {
-  const { currentUser, setFromCreate } = props;
+  const { currentUser, setFromCreate, updateProfileSubmit } = props;
   const [posts, updatePosts] = useState([]);
   const history = useHistory();
 
@@ -35,10 +41,10 @@ export default function MainContainer(props) {
   };
 
   const deletePostSubmit = async id => {
-    console.log('id in deletePostSubmit = ',id)
+    console.log('id in deletePostSubmit = ', id);
     const deleteStatus = await deletePost(id);
     updatePosts(prevPosts => prevPosts.filter(post => post.id != id));
-    console.log(deleteStatus)
+    console.log(deleteStatus);
     history.push('/posts');
   };
 
@@ -54,10 +60,20 @@ export default function MainContainer(props) {
           />
         </Route>
         <Route path='/posts/:id/edit'>
-          <EditPost currentUser={currentUser} editPostSubmit={editPostSubmit} deletePostSubmit={deletePostSubmit} />
+          <EditPost
+            currentUser={currentUser}
+            editPostSubmit={editPostSubmit}
+            deletePostSubmit={deletePostSubmit}
+          />
         </Route>
         <Route path='/posts/:id'>
           <DetailPost currentUser={currentUser} />
+        </Route>
+        <Route path='/users/:id'>
+          <EditProfile
+            currentUser={currentUser}
+            updateProfileSubmit={updateProfileSubmit}
+          />
         </Route>
         <Route path='/'>
           <Posts posts={posts} currentUser={currentUser} />

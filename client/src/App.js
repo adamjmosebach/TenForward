@@ -13,6 +13,7 @@ import {
   registerUser,
   verifyUser,
   removeToken,
+  updateUser
 } from './services/auth';
 import MainContainer from './containers/MainContainer';
 
@@ -46,6 +47,12 @@ function App() {
       : history.push('/')
   };
 
+  const updateProfileSubmit = async (userId, formData) => {
+    const userData = await updateUser(userId, formData);
+    setCurrentUser(userData);
+    history.push('/')
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('authToken');
     removeToken();
@@ -68,7 +75,7 @@ function App() {
               <Register registerSubmit={registerSubmit} />
             </Route>
             <Route path='/'>
-              <MainContainer currentUser={currentUser} setFromCreate={setFromCreate}/>
+              <MainContainer currentUser={currentUser} setFromCreate={setFromCreate} updateProfileSubmit={updateProfileSubmit} />
             </Route>
           </Switch>
         </div>

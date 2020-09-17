@@ -20,6 +20,7 @@ export default function SideBar(props) {
               className='profile-image'
             />
           </div>
+          <Link to={`/users/${currentUser.id}`}><button>Edit Profile</button></Link>
           <button onClick={props.handleLogout}>logout</button>
         </div>
       ) : (

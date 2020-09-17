@@ -1,29 +1,34 @@
 import api from './api-config';
 
-export const loginUser = async (loginData) => {
-  const resp = await api.post('/auth/login', { authentication: loginData })
+export const loginUser = async loginData => {
+  const resp = await api.post('/auth/login', { authentication: loginData });
   localStorage.setItem('authToken', resp.data.token);
-  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
-  return resp.data.user
-}
+  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
+  return resp.data.user;
+};
 
-export const registerUser = async (registerData) => {
-  const resp = await api.post('/users/', { user: registerData })
+export const registerUser = async registerData => {
+  const resp = await api.post('/users/', { user: registerData });
   localStorage.setItem('authToken', resp.data.token);
-  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
-  return resp.data.user
-}
+  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
+  return resp.data.user;
+};
 
 export const verifyUser = async () => {
   const token = localStorage.getItem('authToken');
   if (token) {
-    api.defaults.headers.common.authorization = `Bearer ${token}`
+    api.defaults.headers.common.authorization = `Bearer ${token}`;
     const resp = await api.get('/auth/verify');
-    return resp.data
+    return resp.data;
   }
-  return null
-}
+  return null;
+};
 
 export const removeToken = () => {
-  api.defaults.headers.common.authorization = null
-}
+  api.defaults.headers.common.authorization = null;
+};
+
+export const updateUser = async (id, formData) => {
+  const resp = await api.put(`/users/${id}`, { user: formData });
+  return resp.data
+};
