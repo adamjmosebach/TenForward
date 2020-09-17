@@ -12,6 +12,7 @@ export default function SideBar(props) {
         <div>
           <p>{currentUser.username}</p>
           <p>Rank: {currentUser.rank}</p>
+          <p>Division: {currentUser.division}</p>
           <div className='profile-image-container'>
             <img
               src={currentUser.img_url}

@@ -2,9 +2,11 @@
   width: 25vw;
   height: 90vh;
   border: 2px solid black;
+  text-align: center;
 }
 .profile-image-container {
   width: 60%;
+  margin: 0 auto;
 }
 .profile-image {
   width: 100%;
