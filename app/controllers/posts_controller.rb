@@ -11,7 +11,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    @post = Food.find(params[:id])
     render json: @post, include: :comments
   end
 
@@ -38,8 +37,8 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
-    @post.user = @current_user.posts.find(params[:id])
     @post.destroy
+    render json: 'Successfully destroyed'
   end
 
   private
@@ -50,7 +49,7 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:content, :title, :img_url)
+      params.require(:post).permit(:content, :title, :img_url, :user_id)
       # params.require(:post).permit(:content, :title, :img_url, :user_id)
     end
 end

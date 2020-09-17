@@ -42,8 +42,8 @@ function App() {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
     fromCreate ?
-    history.push('/posts/create')
-    : history.push('/')
+      history.push('/posts/create')
+      : history.push('/')
   };
 
   const handleLogout = () => {
@@ -53,9 +53,11 @@ function App() {
     history.push('/');
   };
 
+  // console.log('currentUser in App.js is '+currentUser)
+
   return (
     <div className='App'>
-      <Layout setFromCreate={setFromCreate}>
+      <Layout setFromCreate={setFromCreate} currentUser={currentUser}>
         <div className='all-not-nav'>
           <SideBar currentUser={currentUser} handleLogout={handleLogout} />
           <Switch>
