@@ -66,6 +66,9 @@ export default function MainContainer(props) {
             deletePostSubmit={deletePostSubmit}
           />
         </Route>
+        {/* <Route path='/posts/:id/comments/create'>
+          <CreateComment />
+        </Route> */}
         <Route path='/posts/:id'>
           <DetailPost currentUser={currentUser} />
         </Route>
@@ -75,6 +78,7 @@ export default function MainContainer(props) {
             updateProfileSubmit={updateProfileSubmit}
           />
         </Route>
+        
         <Route path='/'>
           <Posts posts={posts} currentUser={currentUser} />
         </Route>
