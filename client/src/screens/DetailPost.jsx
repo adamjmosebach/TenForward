@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useHistory } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
-import { postComment } from '../services/comments'
+import { postComment } from '../services/comments';
+import CommentCard from '../components/CommentCard';
 
 export default function DetailPost(props) {
   const { currentUser } = props;
   const { id } = useParams();
   const [thePost, setThePost] = useState(null);
   const [newComment, setNewComment] = useState('');
-  const history = useHistory()
+  const history = useHistory();
 
   useEffect(() => {
     const fetchOnePost = async (id) => {
@@ -28,9 +29,9 @@ export default function DetailPost(props) {
 
   const handleCommentSubmit = async () => {
     const postWithComments = await postComment(thePost.id, newComment);
-    setNewComment('')
-    history.push(`/posts/${thePost.id}`)
-  }
+    setNewComment('');
+    history.push(`/posts/${thePost.id}`);
+  };
 
   if (thePost) {
     return (
@@ -43,8 +44,9 @@ export default function DetailPost(props) {
           <img src={thePost.img_url} className='post-image' />
         </div>
         {thePost.comments &&
-          thePost.comments.map(comment => <p>{comment.content}</p>)
-        }
+          thePost.comments.map((comment) => (
+            <CommentCard comment={comment} currentUser={currentUser} />
+          ))}
         {currentUser && thePost.user_id === currentUser.id && (
           <Link to={`/posts/${thePost.id}/edit`}>
             <button>Edit this Post</button>
