@@ -1,32 +1,54 @@
-import React from 'react';
-import { deleteComment } from '../services/comments';
+import React, { useState } from 'react';
+import { deleteComment, updateComment } from '../services/comments';
 import './CommentCard.css';
 
 export default function CommentCard(props) {
   const { comment, currentUser, thePost } = props;
   // console.log('currentUser in CommentCard = ', currentUser)
+  const [newerComment, setNewerComment] = useState(comment.content);
+  const [editMode, updateEditMode] = useState(false);
 
-  const commentDelete = async (thePost, comment) => {
-    // console.log(`thePost.id = ${thePost.id}, comment.id = ${comment.id}`);
+  const commentDelete = async () => {
     const deleteStatus = await deleteComment(thePost.id, comment.id);
     // thePost.comments.filter((someComment) => someComment.id != comment.id);
     window.location.reload();
   };
 
+  const editComment = async () => {
+    updateEditMode(true);
+  };
+
+  const handleCommentChange = (e) => {
+    setNewerComment(e.target.value)
+  }
+
+  const handleCommentEditSubmit = async () => {
+    const updatedComment = await updateComment(thePost.id, comment.id, newerComment)
+  }
+
   if (currentUser && thePost && comment) {
-    return (
-      <div className='comment-card'>
-        <p>{comment.content}</p>
-        {comment.user_id === currentUser.id && (
-          <div className='comment-buttons'>
-            <button>Edit</button>
-            <button onClick={() => commentDelete(thePost, comment)}>
-              Delete
-            </button>
-          </div>
-        )}
-      </div>
-    );
+    if (editMode) {
+      return (
+        <div className='comment-card'>
+          <form onSubmit={handleCommentEditSubmit}>
+            <input type='text' name='newerComment' value={newerComment} onChange={(e)=>handleCommentChange(e)}/>
+            <button>Submit Comment Change</button>
+          </form>
+        </div>
+      );
+    } else {
+      return (
+        <div className='comment-card'>
+          <p>{comment.content}</p>
+          {comment.user_id === currentUser.id && (
+            <div className='comment-buttons'>
+              <button onClick={editComment}>Edit</button>
+              <button onClick={commentDelete}>Delete</button>
+            </div>
+          )}
+        </div>
+      );
+    }
   } else {
     return <h3>Loading...</h3>;
   }
