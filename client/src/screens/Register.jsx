@@ -28,7 +28,11 @@ export default function Register(props) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        props.registerSubmit(formData);
+        if (passwordConfirm === password) {
+          props.registerSubmit(formData);
+        } else {
+          alert ('Passwords do not match')
+        }
       }}
     >
       <h3>Register</h3>

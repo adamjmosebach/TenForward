@@ -37,11 +37,11 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   def destroy
     @comment.destroy
+    render json: "Comment successfully deleted"
   end
 
   def add_comment_to_post
     @post = Post.find(params[:id])
-
     @comment = Comment.new(comment_params)
     if @comment.save
       @post.comments << @comment
