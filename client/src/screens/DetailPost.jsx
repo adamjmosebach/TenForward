@@ -45,7 +45,7 @@ export default function DetailPost(props) {
         </div>
         {thePost.comments &&
           thePost.comments.map((comment) => (
-            <CommentCard comment={comment} currentUser={currentUser} />
+            <CommentCard comment={comment} currentUser={currentUser} thePost={thePost} />
           ))}
         {currentUser && thePost.user_id === currentUser.id && (
           <Link to={`/posts/${thePost.id}/edit`}>

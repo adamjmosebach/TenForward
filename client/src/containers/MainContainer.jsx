@@ -26,24 +26,24 @@ export default function MainContainer(props) {
     fetchPosts();
   }, []);
 
-  const createPostSubmit = async formData => {
+  const createPostSubmit = async (formData) => {
     const newPost = await postPost(formData);
-    updatePosts(prevPosts => [...prevPosts, newPost]);
+    updatePosts((prevPosts) => [...prevPosts, newPost]);
     history.push('/posts');
   };
 
   const editPostSubmit = async (id, formData) => {
     const updatedPost = await updatePost(id, formData);
-    updatePosts(prevPosts =>
-      prevPosts.map(post => (post.id === Number(id) ? updatedPost : post))
+    updatePosts((prevPosts) =>
+      prevPosts.map((post) => (post.id === Number(id) ? updatedPost : post))
     );
     history.push('/posts');
   };
 
-  const deletePostSubmit = async id => {
+  const deletePostSubmit = async (id) => {
     console.log('id in deletePostSubmit = ', id);
     const deleteStatus = await deletePost(id);
-    updatePosts(prevPosts => prevPosts.filter(post => post.id != id));
+    updatePosts((prevPosts) => prevPosts.filter((post) => post.id != id));
     console.log(deleteStatus);
     history.push('/posts');
   };
@@ -78,7 +78,7 @@ export default function MainContainer(props) {
             updateProfileSubmit={updateProfileSubmit}
           />
         </Route>
-        
+
         <Route path='/'>
           <Posts posts={posts} currentUser={currentUser} />
         </Route>
