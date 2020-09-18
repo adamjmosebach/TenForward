@@ -23,7 +23,12 @@ export default function CommentCard(props) {
   }
 
   const handleCommentEditSubmit = async () => {
-    const updatedComment = await updateComment(thePost.id, comment.id, newerComment)
+    const updatedComment = await updateComment(thePost.id, comment.id, {
+      content: newerComment,
+      post_id: thePost.id,
+      user_id: currentUser.id
+    })
+    console.log(updateComment)
   }
 
   if (currentUser && thePost && comment) {

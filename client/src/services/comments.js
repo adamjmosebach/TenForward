@@ -12,5 +12,6 @@ export const deleteComment = async (post_id, comment_id) => {
 
 export const updateComment = async (post_id, comment_id, body) => {
   const resp = await api.put(`/posts/${post_id}/comments/${comment_id}`, { comment: body });
+  console.log(resp.data)
   return resp.data;
 };
