@@ -5,8 +5,6 @@ import './App.css';
 
 import Layout from './layout/Layout';
 import SideBar from './layout/SideBar';
-import Login from './screens/Login';
-import Register from './screens/Register';
 import stars from './assets/Hyades.jpg';
 
 import {
@@ -66,17 +64,19 @@ function App() {
           <SideBar currentUser={currentUser} handleLogout={handleLogout} />
           <div className='allow-for-sidebar'></div>
           <Switch>
-            <Route path='/login'>
+            {/* <Route path='/login'>
               <Login loginSubmit={loginSubmit} />
             </Route>
             <Route path='/register'>
               <Register registerSubmit={registerSubmit} />
-            </Route>
+            </Route> */}
             <Route path='/'>
               <MainContainer
                 currentUser={currentUser}
                 setFromCreate={setFromCreate}
                 updateProfileSubmit={updateProfileSubmit}
+                loginSubmit={loginSubmit}
+                registerSubmit={registerSubmit}
               />
             </Route>
           </Switch>

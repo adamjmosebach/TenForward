@@ -6,6 +6,8 @@ import {
   updatePost,
   deletePost,
 } from '../services/posts';
+import Login from '../screens/Login';
+import Register from '../screens/Register';
 import CreatePost from '../screens/CreatePost';
 import Posts from '../screens/Posts';
 import EditPost from '../screens/EditPost';
@@ -14,7 +16,7 @@ import EditProfile from '../screens/EditProfile';
 import './MainContainer.css';
 
 export default function MainContainer(props) {
-  const { currentUser, setFromCreate, updateProfileSubmit } = props;
+  const { currentUser, setFromCreate, updateProfileSubmit, loginSubmit, registerSubmit } = props;
   const [posts, updatePosts] = useState([]);
   const history = useHistory();
 
@@ -52,6 +54,12 @@ export default function MainContainer(props) {
     <div className='main-container'>
       {/* <h2>Main Container</h2> */}
       <Switch>
+        <Route path='/login'>
+          <Login loginSubmit={loginSubmit} />
+        </Route>
+        <Route path='/register'>
+          <Register registerSubmit={registerSubmit} />
+        </Route>
         <Route path='/posts/create'>
           <CreatePost
             setFromCreate={setFromCreate}
