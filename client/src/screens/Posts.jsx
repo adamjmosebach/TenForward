@@ -17,6 +17,6 @@ export default function Posts(props) {
       </div>
     );
   } else {
-    return <p>no posts yet</p>;
+    return <img src={`url('https://i.gifer.com/TpfN.gif')`} alt='Federation of Planets' />;
   }
 }
