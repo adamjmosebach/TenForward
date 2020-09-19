@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
+import './Forms.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({

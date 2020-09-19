@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
+import './EditPost.css';
+import './Forms.css';
 
 export default function EditPost(props) {
   const { currentUser, editPostSubmit, deletePostSubmit } = props;
@@ -8,7 +10,7 @@ export default function EditPost(props) {
   const [formData, setFormData] = useState(null);
 
   useEffect(() => {
-    const fetchOne = async id => {
+    const fetchOne = async (id) => {
       const thePost = await getOnePost(id);
       setFormData({
         title: thePost.title,
@@ -20,9 +22,9 @@ export default function EditPost(props) {
     fetchOne(id);
   }, []);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevFormData => ({
+    setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }));
@@ -31,42 +33,52 @@ export default function EditPost(props) {
   if (formData && currentUser && currentUser.id === formData.user_id) {
     return (
       <div>
-        <div>Edit Post Screen</div>;
         <form
-          onSubmit={e => {
+          className='create-edit-post-form'
+          onSubmit={(e) => {
             e.preventDefault();
             editPostSubmit(id, formData);
           }}
         >
-          <label>
-            Title
+          <h3 className='form-heading edit-post-heading'>Edit Post</h3>;
+          <div className='label-input'>
+            <label htmlFor='edit-post-title'>Title:</label>
             <input
               type='text'
               name='title'
+              className='edit-post-title'
               value={formData.title}
-              onChange={e => handleChange(e)}
+              onChange={(e) => handleChange(e)}
             />
-          </label>
-          <label>
-            Write your post here
+          </div>
+          <div className='label-input textarea-label-input'>
+            <label htmlFor='edit-post-content textarea-label-input'>
+              Write your post here:
+            </label>
             <textarea
               name='content'
+              className='edit-post-content'
               value={formData.content}
-              onChange={e => handleChange(e)}
+              onChange={(e) => handleChange(e)}
             />
-          </label>
-          <label>
-            Image URL
+          </div>
+          <div className='label-input'>
+            <label htmlFor='edit-post-img_url'>Image URL:</label>
             <input
               type='text'
               name='img_url'
+              className='edit-post-img_url'
               value={formData.img_url}
-              onChange={e => handleChange(e)}
+              onChange={(e) => handleChange(e)}
             />
-          </label>
-          <button>Submit Changes</button>
+          </div>
+          <div className='edit-post-buttons'>
+            <button className='delete-post-button' onClick={() => deletePostSubmit(id)}>
+              Delete this Post
+            </button>
+            <button className='red-submit'>Submit Changes</button>
+          </div>
         </form>
-        <button onClick={()=>deletePostSubmit(id)}>Delete this Post</button>
       </div>
     );
   } else {
