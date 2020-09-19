@@ -18,11 +18,11 @@ export default function Layout(props) {
         </Link>
         {currentUser ? (
           <Link to='/posts/create'>
-            <button>Create Post</button>
+            <button className='create-post-button'>Create Post</button>
           </Link>
         ) : (
           <Link to='/login'>
-            <button onClick={() => setFromCreate(true)}>Create Post</button>
+            <button className='create-post-button' onClick={() => setFromCreate(true)}>Create Post</button>
           </Link>
         )}
       </div>

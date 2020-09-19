@@ -1,16 +1,20 @@
 .post-card {
+  box-sizing: unset;
   display: flex;
   flex-direction: column;
   border: 2px solid black;
-  margin: 10px;
+  margin: 1vw;
+  margin-left: 8vw;
   border-radius: 5px;
   padding: 2vw;
   background-color: rgba(128, 128, 128, .75);
   width: 30vw;
   align-items: center;
+  color: white;
 }
 .post-image-container {
   width: 30vw;
+  margin-bottom: 1vw;
 }
 .post-image {
   width: 100%;
