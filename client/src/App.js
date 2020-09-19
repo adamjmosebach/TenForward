@@ -7,13 +7,14 @@ import Layout from './layout/Layout';
 import SideBar from './layout/SideBar';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import stars from './assets/Hyades.jpg';
 
 import {
   loginUser,
   registerUser,
   verifyUser,
   removeToken,
-  updateUser
+  updateUser,
 } from './services/auth';
 import MainContainer from './containers/MainContainer';
 
@@ -34,23 +35,19 @@ function App() {
   const loginSubmit = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    fromCreate ?
-      history.push('/posts/create')
-      : history.push('/')
+    fromCreate ? history.push('/posts/create') : history.push('/');
   };
 
   const registerSubmit = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    fromCreate ?
-      history.push('/posts/create')
-      : history.push('/')
+    fromCreate ? history.push('/posts/create') : history.push('/');
   };
 
   const updateProfileSubmit = async (userId, formData) => {
     const userData = await updateUser(userId, formData);
     setCurrentUser(userData);
-    history.push('/')
+    history.push('/');
   };
 
   const handleLogout = () => {
@@ -63,10 +60,11 @@ function App() {
   // console.log('currentUser in App.js is '+currentUser)
 
   return (
-    <div className='App'>
+    <div className='app' style={{ backgroundImage: `url(${stars})` }}>
       <Layout setFromCreate={setFromCreate} currentUser={currentUser}>
         <div className='all-not-nav'>
           <SideBar currentUser={currentUser} handleLogout={handleLogout} />
+          <div className='allow-for-sidebar'></div>
           <Switch>
             <Route path='/login'>
               <Login loginSubmit={loginSubmit} />
@@ -75,7 +73,11 @@ function App() {
               <Register registerSubmit={registerSubmit} />
             </Route>
             <Route path='/'>
-              <MainContainer currentUser={currentUser} setFromCreate={setFromCreate} updateProfileSubmit={updateProfileSubmit} />
+              <MainContainer
+                currentUser={currentUser}
+                setFromCreate={setFromCreate}
+                updateProfileSubmit={updateProfileSubmit}
+              />
             </Route>
           </Switch>
         </div>

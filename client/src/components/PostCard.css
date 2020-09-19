@@ -4,10 +4,13 @@
   border: 2px solid black;
   margin: 10px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 2vw;
+  background-color: rgba(128, 128, 128, .75);
+  width: 30vw;
+  align-items: center;
 }
 .post-image-container {
-  width: 350px;
+  width: 30vw;
 }
 .post-image {
   width: 100%;

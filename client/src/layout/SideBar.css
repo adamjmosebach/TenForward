@@ -1,8 +1,11 @@
 .side-bar {
   width: 25vw;
-  height: 90vh;
+  height: 100vh;
   border: 2px solid black;
   text-align: center;
+  background-color: rgba(128, 128, 128, .75);
+  position: fixed;
+  margin-top: 10vw;
 }
 .profile-image-container {
   width: 60%;

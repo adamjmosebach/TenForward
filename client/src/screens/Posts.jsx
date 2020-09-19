@@ -8,7 +8,7 @@ export default function Posts(props) {
   if (posts) {
     return (
       <div>
-        <h1>All Posts</h1>
+        {/* <h1>All Posts</h1> */}
         <div className='all-posts'>
           {posts.map(post => (
             <PostCard post={post} currentUser={currentUser} />

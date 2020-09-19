@@ -1,4 +1,7 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  width: 75vw;
+  align-items: center;
+  margin-top: 10vw;
 }

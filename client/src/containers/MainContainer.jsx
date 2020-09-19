@@ -50,7 +50,7 @@ export default function MainContainer(props) {
 
   return (
     <div className='main-container'>
-      <h2>Main Container</h2>
+      {/* <h2>Main Container</h2> */}
       <Switch>
         <Route path='/posts/create'>
           <CreatePost

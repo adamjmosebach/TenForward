@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Layout.css';
+import TenForwardBanner from '../assets/TenForwardBanner.png';
 
 export default function Layout(props) {
   const { setFromCreate, currentUser } = props;
 
   return (
-    <div>
-      <img src='' />
-      <Link to='/'><span>TenForward</span></Link>
-      {currentUser ? (
-        <Link to='/posts/create'>
-          <button>Create Post</button>
+    <>
+      <div className='nav'>
+        <Link to='/'>
+          <img
+            src={TenForwardBanner}
+            className='tenforward-banner'
+            alt='TenForward Banner'
+          />
         </Link>
-      ) : (
-        <Link to='/login'>
-          <button onClick={()=>setFromCreate(true)}>Create Post</button>
-        </Link>
-      )}
-      <hr />
+        {currentUser ? (
+          <Link to='/posts/create'>
+            <button>Create Post</button>
+          </Link>
+        ) : (
+          <Link to='/login'>
+            <button onClick={() => setFromCreate(true)}>Create Post</button>
+          </Link>
+        )}
+      </div>
       <main>{props.children}</main>
-    </div>
+    </>
   );
 }

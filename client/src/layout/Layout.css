@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+  position: fixed;
+  width: 100vw;
+}
+.tenforward-banner {
+  width: 40vw;
+}
