@@ -8,7 +8,7 @@ form {
   padding: 2vw;
   text-align: right;
 }
-.login-heading {
+.form-heading {
   text-align: center;
 }
 .login-div {
@@ -17,6 +17,7 @@ form {
 input {
   margin: 1.5vw;
   margin-right: 0;
+  width: 15vw;
 }
 .register-login {
   color: red;
