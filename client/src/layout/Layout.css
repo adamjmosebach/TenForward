@@ -9,3 +9,9 @@
 .tenforward-banner {
   width: 40vw;
 }
+.create-post-button {
+  background-color: #30AAD2;
+  padding: .45vw;
+  font-weight: 600;
+  margin-right: .65vw;
+}

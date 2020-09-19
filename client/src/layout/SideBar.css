@@ -6,6 +6,8 @@
   background-color: rgba(128, 128, 128, .75);
   position: fixed;
   margin-top: 10vw;
+  padding-top: 4vw;
+  color: white;
 }
 .profile-image-container {
   width: 60%;
@@ -16,4 +18,12 @@
 }
 .guinan-pic {
   width: 80%;
+}
+.sidebar-guinan-button {
+  background-color: #044B67;
+  color: white;
+  width: 30%;
+}
+.welcome {
+  font-size: 1.35vw;
 }

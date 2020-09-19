@@ -7,7 +7,7 @@ export default function SideBar(props) {
   const { currentUser } = props;
   return (
     <div className='side-bar'>
-      <h2>Side Bar</h2>
+      {/* <h2>Side Bar</h2> */}
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
@@ -16,7 +16,7 @@ export default function SideBar(props) {
           <div className='profile-image-container'>
             <img
               src={currentUser.img_url}
-              alt="user's picture"
+              alt="user's profile"
               className='profile-image'
             />
           </div>
@@ -26,12 +26,12 @@ export default function SideBar(props) {
       ) : (
         <div>
           <Link to='/login'>
-            <button>Login</button>
+            <button className='sidebar-guinan-button'>Login</button>
           </Link>
           <Link to='/register'>
-            <button>Register</button>
+            <button className='sidebar-guinan-button'>Register</button>
             </Link>
-            <p>"Welcome"</p>
+            <p className='welcome'>"Welcome"</p>
           <img src={guinan} alt='guinan' className='guinan-pic' />
         </div>
       )}
