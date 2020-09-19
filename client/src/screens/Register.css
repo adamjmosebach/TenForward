@@ -5,7 +5,7 @@
 .register-heading {
   text-align: center;
 }
-.register-submit {
+.red-submit {
   width: 40%;
   background-color: #fa3636;
   color: yellow;
@@ -15,7 +15,7 @@
 .division-div {
   margin: 1.5vw 0;
 }
-#register-division {
-  width: 140.68px;
+.division {
+  width: 15vw;
   margin-left: 12px;
 }

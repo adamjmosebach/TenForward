@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './EditProfile.css'
 
 export default function EditProfile(props) {
   const { currentUser, updateProfileSubmit } = props;
@@ -29,9 +30,9 @@ export default function EditProfile(props) {
   const { username, email, password, img_url, division } = formData;
   // const { username, email, img_url, division } = formData;
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
@@ -44,34 +45,34 @@ export default function EditProfile(props) {
   if (currentUser) {
     return (
       <div>
-        <h2>Edit Profile</h2>
         <form
-          onSubmit={e => {
+          onSubmit={(e) => {
             e.preventDefault();
             updateProfileSubmit(currentUser.id, formData);
           }}
-        >
-          <label>
-            Username:
+          >
+          <h3 className='form-heading'>Edit Profile</h3>
+          <div className='label-input'>
+            <label htmlFor='update-profile-username'>Username:</label>
             <input
               type='text'
               name='username'
+              id='update-profile-username'
               value={username}
               onChange={handleChange}
             />
-          </label>
-          <br />
-          <label>
-            Email:
+          </div>
+          <div className='label-input'>
+            <label htmlFor='update-profile-email'>Email:</label>
             <input
               type='text'
               name='email'
+              id='update-profile-email'
               value={email}
               onChange={handleChange}
             />
-          </label>
-          <br />
-          
+          </div>
+
           {/* <label>
           Password Confirm:
           <input
@@ -81,20 +82,22 @@ export default function EditProfile(props) {
             onChange={e => handlePWConfirm(e)}
           />
         </label> */}
-          <label>
-            Image URL
+          <div className='label-input'>
+            <label className='update-profile-img_url'>Image URL:</label>
             <input
               type='text'
               name='img_url'
+              id='update-profile-img_url'
               value={img_url}
               onChange={handleChange}
             />
-          </label>
-          <label>
-            Division
+          </div>
+          <div className='label-input'>
+            <label className='update-profile-division'>Division:</label>
             <select
               name='division'
-              id='division'
+              className='division edit-profile-division'
+              id='update-profile-division'
               value={division}
               onChange={handleChange}
             >
@@ -105,18 +108,20 @@ export default function EditProfile(props) {
               <option value='operations'>Operations</option>
               <option value='science'>Science</option>
             </select>
-          </label>
-          <br />
-          <label>
-            Confirm Password:
+          </div>
+          <div className='label-input'>
+            <label className='update-profile-confirm-password'>
+              Confirm Password:
+            </label>
             <input
               type='password'
               name='password'
+              id='update-profile-confirm-password'
               value={password}
               onChange={handleChange}
             />
-          </label>
-          <button>Update</button>
+          </div>
+          <button className='red-submit'>Update</button>
         </form>
       </div>
     );

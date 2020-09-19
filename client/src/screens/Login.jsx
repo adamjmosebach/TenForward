@@ -28,7 +28,7 @@ export default function Login(props) {
           loginSubmit(formData);
         }}
       >
-        <h3 className='login-heading'>Login</h3>
+        <h3 className='form-heading'>Login</h3>
         <div className='label-input'>
           <label htmlFor='login-username'>Username:</label>
           <input

@@ -37,7 +37,7 @@ export default function Register(props) {
         }
       }}
     >
-      <h3 className='register-heading'>Register</h3>
+      <h3 className='form-heading'>Register</h3>
       <div className='label-input'>
         <label htmlFor='register-username'>Username:</label>
         <input
@@ -90,7 +90,7 @@ export default function Register(props) {
       </div>
       <div className='label-input division-div'>
         <label htmlFor='register-division'>Division:</label>
-        <select name='division' id='register-division' onChange={handleChange}>
+        <select name='division' className='division' id='register-division' onChange={handleChange}>
           <option value='' disabled selected>
             --Select Division--
           </option>
@@ -99,7 +99,7 @@ export default function Register(props) {
           <option value='science'>Science</option>
         </select>
       </div>
-      <button className='register-submit'>Submit</button>
+      <button className='red-submit'>Submit</button>
     </form>
   );
 }
