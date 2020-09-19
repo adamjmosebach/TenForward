@@ -1,0 +1,14 @@
+.edit-post-heading {
+  margin: 10px;
+}
+.edit-post-buttons {
+  display: flex;
+  margin-top: 15px;
+}
+.delete-post-button {
+  width: 40%;
+  background-color: #3c1717;
+  color: yellow;
+  padding: 0.5vw;
+  margin: 15px auto;
+}

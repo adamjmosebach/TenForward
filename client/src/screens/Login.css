@@ -1,23 +1,5 @@
-
-form {
-  color: yellow;
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  background-color: rgba(128, 128, 128, .75);
-  padding: 2vw;
-  text-align: right;
-}
-.form-heading {
-  text-align: center;
-}
 .login-div {
   margin-top: 8vw;
-}
-input {
-  margin: 1.5vw;
-  margin-right: 0;
-  width: 15vw;
 }
 .register-login {
   color: red;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './EditProfile.css'
+import './Forms.css'
 
 export default function EditProfile(props) {
   const { currentUser, updateProfileSubmit } = props;
