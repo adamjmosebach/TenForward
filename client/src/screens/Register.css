@@ -1,0 +1,21 @@
+.register-form {
+  text-align: right;
+  /* margin-top: 2vw; */
+}
+.register-heading {
+  text-align: center;
+}
+.register-submit {
+  width: 40%;
+  background-color: #fa3636;
+  color: yellow;
+  padding: .5vw;
+  margin: 15px auto;
+}
+.division-div {
+  margin: 1.5vw 0;
+}
+#register-division {
+  width: 140.68px;
+  margin-left: 12px;
+}

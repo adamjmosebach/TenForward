@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Login.css';
 
 export default function Login(props) {
   const { loginSubmit } = props;
@@ -19,35 +20,42 @@ export default function Login(props) {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        loginSubmit(formData);
-      }}
-    >
-      <h3>Login</h3>
-      <label>
-        Username:
-        <input
-          type='text'
-          name='username'
-          value={username}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type='password'
-          name='password'
-          value={password}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <Link to='/register'>Register</Link>
-      <button>Submit</button>
-    </form>
+    <div className='login-div'>
+      <form
+        className='login-form'
+        onSubmit={(e) => {
+          e.preventDefault();
+          loginSubmit(formData);
+        }}
+      >
+        <h3 className='login-heading'>Login</h3>
+        <div className='label-input'>
+          <label htmlFor='login-username'>Username:</label>
+          <input
+            type='text'
+            name='username'
+            id='login-username'
+            value={username}
+            onChange={handleChange}
+          />
+        </div>
+        <div className='label-input'>
+          <label htmlFor='login-password'>Password:</label>
+          <input
+            type='password'
+            name='password'
+            id='login-password'
+            value={password}
+            onChange={handleChange}
+          />
+        </div>
+        <div className='login-buttons'>
+          <button className='login-submit'>Submit</button>
+          <Link to='/register' className='register-login'>
+            Register
+          </Link>
+        </div>
+      </form>
+    </div>
   );
 }
