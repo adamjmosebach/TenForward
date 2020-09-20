@@ -8,6 +8,7 @@
   margin-left: 6.5vw;
   margin-bottom: 3vw;
   padding-bottom: 3vw;
+  border-radius: 5pt;
 }
 .detail-title {
   text-decoration: underline;
@@ -21,7 +22,7 @@
 .comment-form {
   width: 80%;
   padding: 0;
-  padding-bottom: 1.5vw;
+  /* padding-bottom: 1.5vw; */
   margin-top: .9vw;
   border: 1px solid black;
 }
@@ -35,5 +36,9 @@
 }
 .post-comment-submit {
   width: 40%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  padding: 1vw;
+  border-top-right-radius: 30pt;
+  border-bottom-right-radius: 30pt;
+  background-color: plum;
 }

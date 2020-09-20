@@ -1,17 +1,27 @@
 .login-div {
   margin-top: 8vw;
 }
-.register-login {
-  color: red;
+.login-button {
+  text-align: center;
+}
+.login-register {
+  color: rgb(247, 103, 103);
   text-decoration: none;
+  padding: .5vw;
+  border-top-right-radius: 30pt;
+  border-bottom-right-radius: 30pt;
+  border: 2px solid black;
+  width: 40%;
 }
 .login-submit {
-  width: 40%;
+  width: 60%;
   background-color: rgb(250, 54, 54);
   color: yellow;
+  border-top-left-radius: 30pt;
+  border-bottom-left-radius: 30pt;
 }
 .login-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 3vw;
 }
