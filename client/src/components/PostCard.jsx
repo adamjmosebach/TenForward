@@ -21,7 +21,7 @@ export default function PostCard(props) {
           <div className='postcard-button-row'>
             <div className='pcb-spacer-1 pcb-s-edit'></div>
             <div className='pcb-spacer-2'></div>
-            <Link to={`/posts/${post.id}/edit`}>
+            <Link to={`/posts/${post.id}/edit`} className='postcard-button-link'>
               <button className='postcard-button pcb-edit'>
                 Edit this Post
               </button>
@@ -31,7 +31,7 @@ export default function PostCard(props) {
         <div className='postcard-button-row'>
           <div className='pcb-spacer-1 pcb-s-comments'></div>
           <div className='pcb-spacer-2'></div>
-          <Link to={`/posts/${post.id}`}>
+          <Link to={`/posts/${post.id}`} className='postcard-button-link'>
             <button className='postcard-button pcb-comments'>Comments</button>
           </Link>
         </div>

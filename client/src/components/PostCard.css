@@ -46,10 +46,13 @@
   padding: 1vw;
   width: 20vw;
   border: 2px solid black;
+  height: 7vw;
+  align-items: center;
 }
 .postcard-button-row {
   display: flex;
   margin: .2vw 0;
+  align-items: center;
 }
 .pcb-edit {
   background-color:rgb(244, 148, 244); 
@@ -60,6 +63,9 @@
 .pcb-spacer-1 {
   width: 100%;
   border: 2px solid black;
+  height: 7vw;
+  /* margin-top: 1.5vw; */
+  /* margin-top: vw; */
 }
 .pcb-spacer-2 {
   width: 10vw;
@@ -69,4 +75,19 @@
 }
 .pcb-s-comments {
   background-color:rgb(250, 202, 151);
+}
+.postcard-button-link {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .postcard-button {
+    font-size: 2vw;
+  }
+  .postcard-title {
+    font-size: 3.25vw;
+  }
+  .postcard-content {
+    font-size: 2.75vw;
+  }
 }

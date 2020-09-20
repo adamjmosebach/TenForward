@@ -14,6 +14,13 @@
   padding: .45vw;
   font-weight: 600;
   margin-right: .15vw;
-  width: 8vw;
-  font-size: 1.15vw;
+  width: 8.75vw;
+  font-size: 1.25vw;
+}
+
+@media screen and (max-width: 1120px) {
+  .create-post-button {
+    width: 10vw;
+    height: 4vw;
+  }
 }
