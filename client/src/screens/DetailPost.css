@@ -25,6 +25,7 @@
   /* padding-bottom: 1.5vw; */
   margin-top: .9vw;
   border: 1px solid black;
+  box-shadow: 2px 2px 2px rgb(63, 63, 63);
 }
 #comment-textarea {
   width: 92%;
@@ -41,4 +42,21 @@
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
   background-color: plum;
+}
+.detail-hero-content {
+  width: 80%;
+  background-color: rgba(0, 0, 0, .75);
+  padding: 1vw;
+  padding-bottom: 0;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2vw 0;
+}
+.detail-title {
+  color: yellow;
+}
+.detail-content {
+  color: pink;
 }
