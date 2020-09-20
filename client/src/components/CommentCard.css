@@ -2,11 +2,15 @@
   border: 1px solid black;
   border-radius: 5px;
   margin: 5px;
-  width: 55%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgba(142, 140, 140, 0.5);
 }
 .comment-buttons {
   align-self: flex-end;
+}
+.show-comment-content {
+  padding: 0 2vw;
 }

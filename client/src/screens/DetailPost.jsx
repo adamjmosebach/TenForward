@@ -3,6 +3,7 @@ import { useParams, Link, useHistory } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
 import { postComment } from '../services/comments';
 import CommentCard from '../components/CommentCard';
+import './DetailPost.css'
 
 export default function DetailPost(props) {
   const { currentUser } = props;
@@ -35,11 +36,11 @@ export default function DetailPost(props) {
 
   if (thePost) {
     return (
-      <div>
-        <h3>Post Detail</h3>
-        <h3>(Post #{thePost.id})</h3>
-        <h3>{thePost.title}</h3>
-        <h4>{thePost.content}</h4>
+      <div className='post-detail-div'>
+        {/* <h3>Post Detail</h3>
+        <h3>(Post #{thePost.id})</h3> */}
+        <h3 className='detail-title'>{thePost.title}</h3>
+        <h4 className='detail-content'>{thePost.content}</h4>
         <div className='post-image-container'>
           <img src={thePost.img_url} className='post-image' />
         </div>
@@ -47,15 +48,15 @@ export default function DetailPost(props) {
           thePost.comments.map((comment) => (
             <CommentCard key={comment.id} comment={comment} currentUser={currentUser} thePost={thePost} />
           ))}
-        {currentUser && thePost.user_id === currentUser.id && (
+        {/* {currentUser && thePost.user_id === currentUser.id && (
           <Link to={`/posts/${thePost.id}/edit`}>
             <button>Edit this Post</button>
           </Link>
-        )}
-        <form onSubmit={handleCommentSubmit}>
-          <textarea name='comment' onChange={(e) => handleCommentChange(e)} />
+        )} */}
+        <form className='comment-form' onSubmit={handleCommentSubmit}>
+          <textarea id='comment-textarea' name='comment' placeholder='Your Comment Here...' onChange={(e) => handleCommentChange(e)} />
           {/* <Link to={`/posts/${thePost.id}/comments/create`}> */}
-          <button>Make A Comment</button>
+          <button className='post-comment-submit'>Post Your Comment</button>
           {/* </Link> */}
         </form>
       </div>
