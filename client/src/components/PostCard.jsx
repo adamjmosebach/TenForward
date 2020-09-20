@@ -15,14 +15,26 @@ export default function PostCard(props) {
         <div className='post-image-container'>
           <img src={post.img_url} className='post-image' />
         </div>
+      </div>
+      <div className='postcard-buttons'>
         {currentUser && post.user_id === currentUser.id && (
-          <Link to={`/posts/${post.id}/edit`}>
-            <button>Edit this Post</button>
-          </Link>
+          <div className='postcard-button-row'>
+            <div className='pcb-spacer-1 pcb-s-edit'></div>
+            <div className='pcb-spacer-2'></div>
+            <Link to={`/posts/${post.id}/edit`}>
+              <button className='postcard-button pcb-edit'>
+                Edit this Post
+              </button>
+            </Link>
+          </div>
         )}
-        <Link to={`/posts/${post.id}`}>
-          <button>Comments</button>
-        </Link>
+        <div className='postcard-button-row'>
+          <div className='pcb-spacer-1 pcb-s-comments'></div>
+          <div className='pcb-spacer-2'></div>
+          <Link to={`/posts/${post.id}`}>
+            <button className='postcard-button pcb-comments'>Comments</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
