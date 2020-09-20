@@ -44,7 +44,7 @@ export default function CommentCard(props) {
     } else {
       return (
         <div className='comment-card'>
-          <p>{comment.content}</p>
+          <p className='show-comment-content'>{comment.content}</p>
           {comment.user_id === currentUser.id && (
             <div className='comment-buttons'>
               <button onClick={editComment}>Edit</button>
