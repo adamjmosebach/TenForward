@@ -1,13 +1,18 @@
 .side-bar {
-  width: 25vw;
+  width: 28vw;
   height: 100vh;
   border: 2px solid black;
   text-align: center;
   background-color: rgba(128, 128, 128, .75);
   position: fixed;
-  margin-top: 10vw;
-  padding-top: 4vw;
+  margin-top: 10.5vw;
   color: white;
+  border-top-right-radius: 4%;
+}
+.profile-info {
+ padding-top: 3vw;
+ width: 90%;
+ /* border: 2px solid blue; */
 }
 .profile-image-container {
   width: 60%;
@@ -27,4 +32,95 @@
 }
 .welcome {
   font-size: 1.75vw;
+}
+.lcars-top-div {
+  width: 100%;
+  display: flex;
+}
+.lcars-top {
+  height: 1.1vw;
+}
+.lcars-top-1 {
+  width: 13%;
+  background-color: purple;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.lcars-top-2 {
+  width: 10%;
+  background-color: orange;
+  border: 2px solid black;
+}
+.lcars-top-3 {
+  width: 35%;
+  background-color: rgb(216, 107, 216);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.lcars-top-4 {
+  width: 25%;
+  background-color: purple;
+  border: 2px solid black;
+}
+.lcars-top-5 {
+  width: 15%;
+  background-color: orange;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.lcars-top-6 {
+  width: 10%;
+  /* height: 25%; */
+  background-color: orange;
+  border-top-right-radius: 70vw;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+.side-bar-main {
+  display: flex;
+  height: 100%;
+}
+.lcars-side-div {
+  position: absolute;
+  right: 0;
+  top: 1vw;
+  width: 10%;
+}
+.lcars-side-1 {
+  height: 15vw;
+  background-color: orange;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+/* .lcars-side-1a {
+  height: 20vh;
+  border-top-right-radius: 50%;
+  background-color: orange;
+} */
+.lcars-side-2 {
+  height: 10vh;
+  background-color: rgb(216, 107, 216);
+  border: 2px solid black;
+}
+.lcars-side-3 {
+  height: 20vh;
+  background-color:purple;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.lcars-side-4 {
+  height: 7vh;
+  background-color: purple;
+  border: 2px solid black;
+}
+.lcars-side-5 {
+  height: 7vh;
+  background-color: rgb(250, 202, 151);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.lcars-side-6 {
+  height: 30vh;
+  background-color: orange;
+  border: 2px solid black;
 }

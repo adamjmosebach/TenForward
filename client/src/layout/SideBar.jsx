@@ -9,20 +9,45 @@ export default function SideBar(props) {
     <div className='side-bar'>
       {/* <h2>Side Bar</h2> */}
       {currentUser ? (
-        <div>
-          <p>{currentUser.username}</p>
-          <p>Rank: {currentUser.rank}</p>
-          <p>Division: {currentUser.division}</p>
-          <div className='profile-image-container'>
-            <img
-              src={currentUser.img_url}
-              alt="user's profile"
-              className='profile-image'
-            />
+        <>
+          <div className='lcars'>
+            <div className='lcars-top-div'>
+              <div className='lcars-top lcars-top-1'></div>
+              <div className='lcars-top lcars-top-2'></div>
+              <div className='lcars-top lcars-top-3'></div>
+              <div className='lcars-top lcars-top-4'></div>
+              <div className='lcars-top lcars-top-5'></div>
+              <div className='lcars-top lcars-top-6'></div>
+            </div>
+            <div className='side-bar-main'>
+              <div className='profile-info'>
+                <p>{currentUser.username}</p>
+                <p>Rank: {currentUser.rank}</p>
+                <p>Division: {currentUser.division}</p>
+                <div className='profile-image-container'>
+                  <img
+                    src={currentUser.img_url}
+                    alt="user's profile"
+                    className='profile-image'
+                  />
+                </div>
+                <Link to={`/users/${currentUser.id}`}>
+                  <button>Edit Profile</button>
+                </Link>
+                <button onClick={props.handleLogout}>logout</button>
+              </div>
+            </div>
           </div>
-          <Link to={`/users/${currentUser.id}`}><button>Edit Profile</button></Link>
-          <button onClick={props.handleLogout}>logout</button>
-        </div>
+          <div className='lcars-side-div'>
+            <div className='lcars-side lcars-side-1'></div>
+            <div className='lcars-side lcars-side-1a'></div>
+            <div className='lcars-side lcars-side-2'></div>
+            <div className='lcars-side lcars-side-3'></div>
+            <div className='lcars-side lcars-side-4'></div>
+            <div className='lcars-side lcars-side-5'></div>
+            <div className='lcars-side lcars-side-6'></div>
+          </div>
+        </>
       ) : (
         <div>
           <Link to='/login'>
@@ -30,8 +55,8 @@ export default function SideBar(props) {
           </Link>
           <Link to='/register'>
             <button className='sidebar-guinan-button'>Register</button>
-            </Link>
-            <p className='welcome'>"Welcome"</p>
+          </Link>
+          <p className='welcome'>"Welcome"</p>
           <img src={guinan} alt='guinan' className='guinan-pic' />
         </div>
       )}
