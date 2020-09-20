@@ -36,13 +36,14 @@ export default function CommentCard(props) {
       return (
         <div className='comment-card'>
           <form onSubmit={handleCommentEditSubmit}>
-            <input
+            <textarea
+              className='comment-change-textarea'
               type='text'
               name='newerComment'
               value={newerComment}
               onChange={(e) => handleCommentChange(e)}
             />
-            <button>Submit Comment Change</button>
+            <button className='red-submit'>Submit Comment Change</button>
           </form>
         </div>
       );
