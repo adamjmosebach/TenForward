@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './SideBar.css';
 import guinan from '../assets/guinan.jpg';
+import lcarsCommunique from '../assets/lcarsCommunique.gif'
 
 export default function SideBar(props) {
   const { currentUser } = props;
@@ -21,9 +22,11 @@ export default function SideBar(props) {
             </div>
             <div className='side-bar-main'>
               <div className='profile-info'>
-                <p>{currentUser.username}</p>
-                <p>Rank: {currentUser.rank}</p>
-                <p>Division: {currentUser.division}</p>
+                <p className='profile-name'>{currentUser.username}</p>
+                <p className='profile-stats'>Rank: {currentUser.rank}</p>
+                <p className='profile-stats'>
+                  Division: {currentUser.division}
+                </p>
                 <div className='profile-image-container'>
                   <img
                     src={currentUser.img_url}
@@ -31,11 +34,14 @@ export default function SideBar(props) {
                     className='profile-image'
                   />
                 </div>
-                <Link to={`/users/${currentUser.id}`}>
-                  <button>Edit Profile</button>
-                </Link>
-                <button onClick={props.handleLogout}>logout</button>
+                <div className='profile-buttons'>
+                  <Link to={`/users/${currentUser.id}`}>
+                    <button className='profile-button prof-edit'>Edit Profile</button>
+                  </Link>
+                  <button className='profile-button prof-logout' onClick={props.handleLogout}>Logout</button>
+                </div>
               </div>
+              <img src={lcarsCommunique} className='lcars-communique' alt='Federation of Planets Communique' />
             </div>
           </div>
           <div className='lcars-side-div'>
@@ -49,7 +55,7 @@ export default function SideBar(props) {
           </div>
         </>
       ) : (
-        <div>
+        <div className='guinan-landing'>
           <Link to='/login'>
             <button className='sidebar-guinan-button'>Login</button>
           </Link>

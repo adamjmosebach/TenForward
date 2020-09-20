@@ -3,12 +3,25 @@
 }
 .edit-post-buttons {
   display: flex;
-  margin-top: 15px;
+  margin: 15px;
+  height: 5.5vw;
+
+  width: 29vw;
 }
 .delete-post-button {
-  width: 40%;
+  width: 45%;
   background-color: #3c1717;
   color: yellow;
-  padding: 0.5vw;
-  margin: 15px auto;
+  padding: .9vw;
+  padding-right: 1.3vw;
+  margin-top: 1.7vw;
+  /* margin-left: -2.1vw; */
+  border-top-left-radius: 30pt;
+  border-bottom-left-radius: 30pt;
+  text-align: center;
+}
+
+#edit-post-submit {
+  width: 75%;
+  text-align: center;
 }

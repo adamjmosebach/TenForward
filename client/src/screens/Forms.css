@@ -20,6 +20,7 @@ textarea {
   margin: 1.5vw;
   margin-right: 0;
   width: 15vw;
+  border: 1px solid black;
 }
 textarea {
   height: 75px;
@@ -29,11 +30,14 @@ textarea {
   align-items: center;
 }
 .red-submit {
-  width: 40%;
+  width: 90%;
   background-color: #fa3636;
   color: yellow;
-  padding: .5vw;
-  margin: 15px auto;
+  padding: .9vw;
+  margin-top: 1.7vw;
+  margin-left: -2.1vw;
+  border-top-right-radius: 30pt;
+  border-bottom-right-radius: 30pt;
 }
 .create-edit-post-form {
   margin-top: 5vw;

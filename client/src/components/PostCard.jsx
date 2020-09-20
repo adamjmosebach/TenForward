@@ -10,8 +10,8 @@ export default function PostCard(props) {
     <div className='post-card'>
       <div className='post-card-content'>
         {/* <p>{currentUser.username}</p> */}
-        <h3>{post.title}</h3>
-        <h4>{post.content}</h4>
+        <h3 className='postcard-title'>{post.title}</h3>
+        <h4 className='postcard-content'>{post.content}</h4>
         <div className='post-image-container'>
           <img src={post.img_url} className='post-image' />
         </div>

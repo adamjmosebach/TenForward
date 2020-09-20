@@ -9,8 +9,11 @@
   color: white;
   border-top-right-radius: 4%;
 }
+.guinan-landing {
+  margin-top: 5vw;
+}
 .profile-info {
- padding-top: 3vw;
+ padding-top: 1.5vw;
  width: 90%;
  /* border: 2px solid blue; */
 }
@@ -20,6 +23,7 @@
 }
 .profile-image {
   width: 100%;
+  border: 1px solid rgb(223, 197, 215);;
 }
 .guinan-pic {
   width: 80%;
@@ -31,7 +35,8 @@
   font-size: 1.5vw;
 }
 .welcome {
-  font-size: 1.75vw;
+  font-size: 2vw;
+  margin: 4vw;
 }
 .lcars-top-div {
   width: 100%;
@@ -123,4 +128,39 @@
   height: 30vh;
   background-color: orange;
   border: 2px solid black;
+}
+.profile-name {
+  color: yellow;
+  font-size: 2.5vw;
+}
+.profile-stats {
+  color: rgb(223, 197, 215);
+  font-size: 2vw;
+}
+.profile-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.profile-button {
+  width: 15vw;
+  height: 30px;
+  margin: 5px;
+  border-top-right-radius: 30pt;
+  border-bottom-right-radius: 30pt;
+}
+.prof-edit {
+  background-color: rgb(244, 148, 244); 
+}
+.prof-logout {
+  background-color: orange;
+}
+.lcars-communique {
+  width: 20vw;
+  height: 15vw;
+  position: absolute;
+  left: 2.5vw;
+  bottom: 12vw;
+  opacity: .75;
 }

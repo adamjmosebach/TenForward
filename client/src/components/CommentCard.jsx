@@ -19,24 +19,29 @@ export default function CommentCard(props) {
   };
 
   const handleCommentChange = (e) => {
-    setNewerComment(e.target.value)
-  }
+    setNewerComment(e.target.value);
+  };
 
   const handleCommentEditSubmit = async () => {
     const updatedComment = await updateComment(thePost.id, comment.id, {
       content: newerComment,
       post_id: thePost.id,
-      user_id: currentUser.id
-    })
-    console.log(updateComment)
-  }
+      user_id: currentUser.id,
+    });
+    console.log(updateComment);
+  };
 
   if (currentUser && thePost && comment) {
     if (editMode) {
       return (
         <div className='comment-card'>
           <form onSubmit={handleCommentEditSubmit}>
-            <input type='text' name='newerComment' value={newerComment} onChange={(e)=>handleCommentChange(e)}/>
+            <input
+              type='text'
+              name='newerComment'
+              value={newerComment}
+              onChange={(e) => handleCommentChange(e)}
+            />
             <button>Submit Comment Change</button>
           </form>
         </div>
@@ -47,8 +52,12 @@ export default function CommentCard(props) {
           <p className='show-comment-content'>{comment.content}</p>
           {comment.user_id === currentUser.id && (
             <div className='comment-buttons'>
-              <button onClick={editComment}>Edit</button>
-              <button onClick={commentDelete}>Delete</button>
+              <button className='comment-button-delete' onClick={commentDelete}>
+                Delete
+              </button>
+              <button className='comment-button-edit' onClick={editComment}>
+                Edit
+              </button>
             </div>
           )}
         </div>

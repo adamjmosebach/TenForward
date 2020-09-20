@@ -26,6 +26,12 @@
 .post-image {
   width: 100%;
 }
+.postcard-title {
+  color: yellow;
+}
+.postcard-content {
+  color: pink;
+}
 .postcard-buttons {
   display: flex;
   flex-direction: column;
@@ -39,9 +45,11 @@
   border-bottom-right-radius: 20pt;
   padding: 1vw;
   width: 20vw;
+  border: 2px solid black;
 }
 .postcard-button-row {
   display: flex;
+  margin: .2vw 0;
 }
 .pcb-edit {
   background-color:rgb(244, 148, 244); 
@@ -51,7 +59,7 @@
 }
 .pcb-spacer-1 {
   width: 100%;
-  border: 2px solid blue;
+  border: 2px solid black;
 }
 .pcb-spacer-2 {
   width: 10vw;
