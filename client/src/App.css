@@ -7,3 +7,9 @@
 .allow-for-sidebar {
   width: 25vw;
 }
+
+@media screen and (max-width: 426px) {
+  .allow-for-sidebar {
+    display: none;
+  }
+}

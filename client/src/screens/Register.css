@@ -9,3 +9,12 @@
   width: 15vw;
   margin-left: 12px;
 }
+
+@media screen and (max-width: 426px) {
+  .register-form {
+    margin-top: 25vw;
+  }
+  .division {
+    width: 45vw;
+  }
+}

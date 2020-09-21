@@ -31,8 +31,21 @@
   margin-top: 3vw;
   position: absolute;
   bottom: -4vw;
-  /* width: 33vw; */
   width: 100%;
   left: 0;
-  /* left: -2vw; */
+}
+
+@media screen and (max-width: 426px) {
+  .login-div {
+    text-align: center;
+  }
+  .login-buttons {
+    height: 6.5vw;
+    bottom: -8vw;
+  }
+  .login-register,
+  .login-submit {
+    font-size: 2.5vw;
+    line-height: 4.5vw;
+  }
 }
