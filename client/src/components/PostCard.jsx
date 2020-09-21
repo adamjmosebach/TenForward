@@ -10,18 +10,23 @@ export default function PostCard(props) {
     <div className='post-card'>
       <div className='post-card-content'>
         {/* <p>{currentUser.username}</p> */}
-        <h3 className='postcard-title'>{post.title}</h3>
-        <h4 className='postcard-content'>{post.content}</h4>
-        <div className='post-image-container'>
-          <img src={post.img_url} className='post-image' alt='posted pic'/>
-        </div>
+        {post.title && <h3 className='postcard-title'>{post.title}</h3>}
+        {post.content && <h4 className='postcard-content'>{post.content}</h4>}
+        {post.img_url && (
+          <div className='post-image-container'>
+            <img src={post.img_url} className='post-image' alt='posted pic' />
+          </div>
+        )}
       </div>
       <div className='postcard-buttons'>
         {currentUser && post.user_id === currentUser.id && (
           <div className='postcard-button-row'>
             <div className='pcb-spacer-1 pcb-s-edit'></div>
             <div className='pcb-spacer-2'></div>
-            <Link to={`/posts/${post.id}/edit`} className='postcard-button-link'>
+            <Link
+              to={`/posts/${post.id}/edit`}
+              className='postcard-button-link'
+            >
               <button className='postcard-button pcb-edit'>
                 Edit this Post
               </button>
