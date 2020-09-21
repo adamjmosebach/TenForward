@@ -59,7 +59,10 @@ function App() {
 
   return (
     <div className='app' style={{ backgroundImage: `url(${stars})` }}>
-      <Layout setFromCreate={setFromCreate} currentUser={currentUser}>
+      <Layout
+        setFromCreate={setFromCreate}
+        currentUser={currentUser}
+      >
         <div className='all-not-nav'>
           <SideBar currentUser={currentUser} handleLogout={handleLogout} />
           <div className='allow-for-sidebar'></div>

@@ -16,15 +16,32 @@ export default function Layout(props) {
             alt='TenForward Banner'
           />
         </Link>
-        {currentUser ? (
-          <Link to='/posts/create'>
-            <button className='create-post-button'>Create Post</button>
-          </Link>
-        ) : (
-          <Link to='/login'>
-            <button className='create-post-button' onClick={() => setFromCreate(true)}>Create Post</button>
-          </Link>
-        )}
+        <div className='layout-button-corner'>
+          {currentUser ? (
+            <Link to='/posts/create'>
+              <button className='create-post-button'>Create Post</button>
+            </Link>
+          ) : (
+            <Link to='/login'>
+              <button
+                className='create-post-button'
+                onClick={() => setFromCreate(true)}
+              >
+                Create Post
+              </button>
+            </Link>
+          )}
+          <div className='guinan-buttons'>
+            <Link to='/login'>
+              <button className='layout-guinan-button guinan-login'>
+                Login
+              </button>
+            </Link>
+            <Link to='/register'>
+              <button className='layout-guinan-button'>Register</button>
+            </Link>
+          </div>
+        </div>
       </div>
       <main>{props.children}</main>
     </>

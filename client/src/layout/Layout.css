@@ -12,14 +12,17 @@
 }
 .create-post-button {
   background-color: #6bd5f8;
-  padding: .45vw;
+  padding: 0.45vw;
   font-weight: 600;
   /* margin-right: .15vw; */
   width: 10vw;
   font-size: 1.25vw;
   border-top-left-radius: 30pt;
   border-bottom-left-radius: 30pt;
-  border: 2px solid #30AAD2;
+  border: 2px solid #30aad2;
+}
+.guinan-buttons {
+  display: none;
 }
 
 @media screen and (max-width: 1120px) {
@@ -29,8 +32,43 @@
   }
 }
 @media screen and (max-width: 426px) {
+  .nav {
+    height: 25vw;
+    background-color: black;
+  }
+  .tenforward-banner {
+    width: 55vw;
+  }
+  .layout-button-corner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: -5vw;
+  }
   .create-post-button {
-    width: 10vw;
-    height: unset;
+    width: 20vw;
+    height: 5vw;
+    font-size: 2vw;
+  }
+  .guinan-buttons {
+    display: flex;
+  }
+  .layout-guinan-button {
+    right: 0;
+    height: 4vw;
+    margin-top: 4.75vw;
+    padding: 0 3vw;
+    width: 20vw;
+    height: 5vw;
+    font-size: 2vw;
+    background-color: #044b67;
+    color: white;
+  }
+  .profile-links {
+    margin: 0;
+  }
+  .guinan-login {
+    border-top-left-radius: 30pt;
+    border-bottom-left-radius: 30pt;
   }
 }
