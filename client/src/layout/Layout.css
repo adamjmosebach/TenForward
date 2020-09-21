@@ -21,7 +21,10 @@
   border-bottom-left-radius: 30pt;
   border: 2px solid #30aad2;
 }
-.guinan-buttons {
+.layout-guinan-buttons {
+  display: none;
+}
+.layout-profile-buttons {
   display: none;
 }
 
@@ -50,7 +53,7 @@
     height: 5vw;
     font-size: 2vw;
   }
-  .guinan-buttons {
+  .layout-guinan-buttons {
     display: flex;
   }
   .layout-guinan-button {
@@ -64,11 +67,27 @@
     background-color: #044b67;
     color: white;
   }
-  .profile-links {
-    margin: 0;
-  }
   .guinan-login {
     border-top-left-radius: 30pt;
     border-bottom-left-radius: 30pt;
+  }
+  .layout-profile-buttons {
+    display: flex;
+    align-items: baseline;
+    margin: -1.6vw;
+  }
+  .layout-profile-button {
+    width: 17vw;
+    height: 5vw;
+    font-size: 2vw;
+    margin: 0;
+  }
+  .layout-prof-edit {
+    background-color: rgb(244, 148, 244);
+    border-top-left-radius: 30pt;
+    border-bottom-left-radius: 30pt;
+  }
+  .layout-prof-logout {
+    background-color: orange;
   }
 }
