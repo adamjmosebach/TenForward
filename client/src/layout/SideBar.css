@@ -8,14 +8,17 @@
   margin-top: 10.5vw;
   color: white;
   border-top-right-radius: 4%;
+  max-width: 304px;
 }
 .guinan-landing {
   margin-top: 5vw;
 }
 .profile-info {
-  padding-top: 1.5vw;
+  /* padding-top: 2%; */
   width: 90%;
   /* border: 2px solid blue; */
+  max-width: 270px;
+  /* font-size: 2vw; */
 }
 .profile-image-container {
   width: 60%;
@@ -92,7 +95,7 @@
   width: 10%;
 }
 .lcars-side-1 {
-  height: 15vw;
+  height: 12vh;
   background-color: orange;
   border-left: 2px solid black;
   border-right: 2px solid black;
@@ -129,19 +132,28 @@
   background-color: orange;
   border: 2px solid black;
 }
+.lcars-side-7 {
+  height: 10vh;
+  background-color: rgb(216, 107, 216);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
 .profile-name {
   color: yellow;
-  font-size: 2.5vw;
+  font-size: 2vw;
+  margin: 1vw;
 }
 .profile-stats {
   color: rgb(223, 197, 215);
-  font-size: 2vw;
+  font-size: 1.5vw;
+  margin: 1vw;
 }
 .profile-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+  /* max-width: 210px; */
 }
 .profile-button {
   width: 15vw;
@@ -149,6 +161,8 @@
   margin: 5px;
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
+  border: 2px solid black;
+  max-width: 230px;
 }
 .prof-edit {
   background-color: rgb(244, 148, 244);
@@ -157,12 +171,16 @@
   background-color: orange;
 }
 .lcars-communique {
+  display: inline-block;
   width: 20vw;
   height: 15vw;
-  position: absolute;
-  left: 2.5vw;
-  bottom: 12vw;
+  /* position: absolute; */
+  /* left: 2.5vw;
+    bottom: 12vw; */
   opacity: 0.75;
+  margin-top: 1vw;
+  max-width: 190px;
+  max-height: 130px;
 }
 
 @media screen and (max-width: 600px) {
@@ -170,3 +188,8 @@
     font-size: 2vw;
   }
 }
+/* @media screen and (min-width: 1200px) {
+  .lcars-communique {
+    display: none;
+  }
+} */

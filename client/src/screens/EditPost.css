@@ -12,15 +12,16 @@
   width: 45%;
   background-color: #3c1717;
   color: yellow;
-  padding: .9vw;
-  padding-right: 1.3vw;
+  padding: .9vw 1.3vw .9vw 1.5vw;;
   margin-top: 1.7vw;
   /* margin-left: -2.1vw; */
   border-top-left-radius: 30pt;
   border-bottom-left-radius: 30pt;
-  text-align: center;
+  text-align: left;
 }
-
+.edit-post-content-input {
+  right: 0;
+}
 #edit-post-submit {
   width: 75%;
   text-align: center;
