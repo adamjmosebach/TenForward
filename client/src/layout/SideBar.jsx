@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './SideBar.css';
 import guinan from '../assets/guinan.jpg';
-import lcarsCommunique from '../assets/lcarsCommunique.gif'
+import lcarsCommunique from '../assets/lcarsCommunique.gif';
 
 export default function SideBar(props) {
   const { currentUser } = props;
@@ -36,12 +36,23 @@ export default function SideBar(props) {
                 </div>
                 <div className='profile-buttons'>
                   <Link to={`/users/${currentUser.id}`}>
-                    <button className='profile-button prof-edit'>Edit Profile</button>
+                    <button className='profile-button prof-edit'>
+                      Edit Profile
+                    </button>
                   </Link>
-                  <button className='profile-button prof-logout' onClick={props.handleLogout}>Logout</button>
+                  <button
+                    className='profile-button prof-logout'
+                    onClick={props.handleLogout}
+                  >
+                    Logout
+                  </button>
                 </div>
+                <img
+                  src={lcarsCommunique}
+                  className='lcars-communique'
+                  alt='Federation of Planets Communique'
+                />
               </div>
-              <img src={lcarsCommunique} className='lcars-communique' alt='Federation of Planets Communique' />
             </div>
           </div>
           <div className='lcars-side-div'>
@@ -52,6 +63,7 @@ export default function SideBar(props) {
             <div className='lcars-side lcars-side-4'></div>
             <div className='lcars-side lcars-side-5'></div>
             <div className='lcars-side lcars-side-6'></div>
+            <div className='lcars-side lcars-side-7'></div>
           </div>
         </>
       ) : (

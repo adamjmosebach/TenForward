@@ -51,7 +51,7 @@ export default function EditPost(props) {
               onChange={(e) => handleChange(e)}
             />
           </div>
-          <div className='label-input textarea-label-input'>
+          <div className='label-input textarea-label-input edit-post-content-input'>
             <label htmlFor='edit-post-content textarea-label-input'>
               Write your post here:
             </label>

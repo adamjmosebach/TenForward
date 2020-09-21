@@ -43,11 +43,12 @@
 .postcard-button {
   border-top-right-radius: 20pt;
   border-bottom-right-radius: 20pt;
-  padding: 1vw;
+  /* padding: 1vw; */
   width: 20vw;
   border: 2px solid black;
-  height: 7vw;
+  height: 3vw;
   align-items: center;
+  line-height: 2.5vw;
 }
 .postcard-button-row {
   display: flex;
@@ -63,7 +64,7 @@
 .pcb-spacer-1 {
   width: 100%;
   border: 2px solid black;
-  height: 7vw;
+  height: 3vw;
   /* margin-top: 1.5vw; */
   /* margin-top: vw; */
 }
