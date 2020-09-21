@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1vw;
+  padding-right: 0;
   position: fixed;
   width: 100vw;
 }
@@ -10,12 +11,15 @@
   width: 40vw;
 }
 .create-post-button {
-  background-color: #30AAD2;
+  background-color: #6bd5f8;
   padding: .45vw;
   font-weight: 600;
-  margin-right: .15vw;
-  width: 8.75vw;
+  /* margin-right: .15vw; */
+  width: 10vw;
   font-size: 1.25vw;
+  border-top-left-radius: 30pt;
+  border-bottom-left-radius: 30pt;
+  border: 2px solid #30AAD2;
 }
 
 @media screen and (max-width: 1120px) {

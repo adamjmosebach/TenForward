@@ -179,8 +179,8 @@
     bottom: 12vw; */
   opacity: 0.75;
   margin-top: 1vw;
-  max-width: 190px;
-  max-height: 130px;
+  max-width: 220px;
+  max-height: 150px;
 }
 
 @media screen and (max-width: 600px) {
