@@ -35,7 +35,7 @@ export default function CommentCard(props) {
     if (editMode) {
       return (
         <div className='comment-card'>
-          <form onSubmit={handleCommentEditSubmit}>
+          <form className='comment-form' onSubmit={handleCommentEditSubmit}>
             <textarea
               className='comment-change-textarea'
               type='text'
