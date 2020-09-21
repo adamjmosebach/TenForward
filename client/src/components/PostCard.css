@@ -16,8 +16,10 @@
 .post-card-content {
   background-color: rgba(0, 0, 0, .75);
   padding: 1vw;
-  padding-bottom: 0;
+  /* padding-bottom: -4vw; */
   border-radius: 2%;
+  display: flex;
+  flex-direction: column;
 }
 .post-image-container {
   width: 30vw;
@@ -28,9 +30,14 @@
 }
 .postcard-title {
   color: yellow;
+  margin: 0;
+  margin-top: 2vw;
+  /* font-size: 2vw; */
 }
 .postcard-content {
   color: pink;
+  margin: 3vw 0;
+  /* font-size: 1vw; */
 }
 .postcard-buttons {
   display: flex;
@@ -54,6 +61,8 @@
   display: flex;
   margin: .2vw 0;
   align-items: center;
+  /* background-color: black;
+  padding: 10px; */
 }
 .pcb-edit {
   background-color:rgb(244, 148, 244); 
@@ -79,6 +88,9 @@
 }
 .postcard-button-link {
   margin: 0;
+  display: flex;
+  /* align-items: center; */
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -90,5 +102,26 @@
   }
   .postcard-content {
     font-size: 2.75vw;
+  }
+}
+@media screen and (max-width: 426px) {
+  .post-card {
+    width: 55vw;
+    margin-left: 0;
+  }
+  .post-card-content {
+    width: 92%;
+    padding: 3%;
+    /* margin-top: 2vw; */
+  }
+  .post-image-container {
+    align-self: center;
+  }
+  .postcard-button {
+    height: 4.25vw;
+    margin: .35vw;
+  }
+  .pcb-spacer-1 {
+    height: 4.25vw;
   }
 }

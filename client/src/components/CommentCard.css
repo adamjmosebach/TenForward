@@ -9,6 +9,9 @@
   background-color: rgba(233, 231, 230, 0.5);
   color: rgb(57, 2, 167);
 }
+.comment-form {
+  margin: 2vw auto 5vw;
+}
 .show-comment-content {
   padding: 0 2vw;
   font-size: 1.75vw;
@@ -35,6 +38,32 @@
   margin: 0;
 }
 #comment-edit-submit {
-  width: 60%;
-  font: 2vw;
+  width: 70%;
+  font-size: 1.5vw;
+  height: 3.5vw;
+}
+
+@media screen and (max-width: 426px) {
+  .show-comment-content {
+    padding: 0 2vw;
+    font-size: 3vw;
+  }
+  .comment-button-edit,
+  .comment-button-delete {
+    height: 4.62vw;
+    font-size: 2.5vw;
+  }
+  #comment-edit-submit {
+    width: 70%;
+    font-size: 2.2vw;
+    bottom: -6.5vw;
+    height: 5vw;
+  }  
+  .comment-change-textarea {
+    margin: 1vw auto;
+    width: 90%;
+  }
+  .comment-form {
+    margin: 2vw auto 7vw;
+  }
 }

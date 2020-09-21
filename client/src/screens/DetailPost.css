@@ -14,7 +14,7 @@
   text-decoration: underline;
   font-size: 2.3vw;
 }
-.post-image-container {
+.post-detail-image-container {
   margin-bottom: 35px;
 }
 .detail-content {
@@ -62,3 +62,29 @@
 .detail-content {
   color: pink;
 }
+
+@media screen and (max-width: 426px) {
+  .post-detail-div {
+    width: 85vw;
+  }
+  /* .detail-content {
+    width: 75vw;
+  } */
+  .post-detail-image-container {
+    width: 90%;
+    margin-bottom: 35px;
+  }
+  .detail-title {
+    font-size: 4vw;
+  }
+  .detail-content {
+    font-size: 3vw;
+  }
+  .post-comment-submit {
+    width: 50%;
+    font-size: 3vw;
+  }
+  #comment-textarea {
+    padding: 1vw;
+  }
+} 
