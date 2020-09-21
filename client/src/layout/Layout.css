@@ -28,3 +28,9 @@
     height: 4vw;
   }
 }
+@media screen and (max-width: 426px) {
+  .create-post-button {
+    width: 10vw;
+    height: unset;
+  }
+}

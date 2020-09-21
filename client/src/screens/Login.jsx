@@ -51,10 +51,10 @@ export default function Login(props) {
           />
         </div>
         <div className='login-buttons'>
-          <button className='login-button login-submit'>Submit</button>
           <Link to='/register' className=' login-button login-register'>
             Register
           </Link>
+          <button className='login-button login-submit'>Submit</button>
         </div>
       </form>
     </div>

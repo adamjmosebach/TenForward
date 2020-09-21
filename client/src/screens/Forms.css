@@ -5,7 +5,7 @@ form {
   align-items: space-between;
   background-color: rgba(29, 29, 29, 0.75);
   border: 2vw solid rgba(128, 128, 128, .75);
-  border-bottom: 5vw solid rgba(128, 128, 128, .75);
+  border-bottom: 5.5vw solid rgba(128, 128, 128, .75);
   padding: 2vw;
   text-align: right;
   position: relative;
@@ -52,7 +52,7 @@ textarea {
   border-bottom-left-radius: 30pt;
   border: 2px solid black;
   position: absolute;
-  bottom: -4.2vw;
+  bottom: -4.5vw;
   right: 0;
 }
 .create-edit-post-form {

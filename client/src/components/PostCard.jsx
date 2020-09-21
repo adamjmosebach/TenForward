@@ -13,7 +13,7 @@ export default function PostCard(props) {
         <h3 className='postcard-title'>{post.title}</h3>
         <h4 className='postcard-content'>{post.content}</h4>
         <div className='post-image-container'>
-          <img src={post.img_url} className='post-image' />
+          <img src={post.img_url} className='post-image' alt='posted pic'/>
         </div>
       </div>
       <div className='postcard-buttons'>

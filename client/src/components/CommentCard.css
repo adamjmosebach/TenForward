@@ -7,10 +7,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(233, 231, 230, 0.5);
-  color: rgb(89, 8, 250);
+  color: rgb(57, 2, 167);
 }
 .show-comment-content {
   padding: 0 2vw;
+  font-size: 1.75vw;
 }
 .comment-buttons {
   align-self: flex-end;
@@ -25,11 +26,15 @@
   border-top-left-radius: 30pt;
   border-bottom-left-radius: 30pt;
   border: 2px solid black;
-  background-color: rgb(130, 102, 159);
+  background-color: rgb(133, 86, 182);
 }
 .comment-change-textarea {
   width: 100%;
   border: 1px solid black;
   padding: .5vw;
   margin: 0;
+}
+#comment-edit-submit {
+  width: 60%;
+  font: 2vw;
 }

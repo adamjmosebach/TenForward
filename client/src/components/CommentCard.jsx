@@ -43,7 +43,7 @@ export default function CommentCard(props) {
               value={newerComment}
               onChange={(e) => handleCommentChange(e)}
             />
-            <button className='red-submit'>Submit Comment Change</button>
+            <button className='red-submit' id='comment-edit-submit'>Submit Comment Change</button>
           </form>
         </div>
       );
