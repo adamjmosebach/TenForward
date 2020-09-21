@@ -55,7 +55,7 @@ select {
   /* background-color: #fa3636; */
   background-color: rgb(161, 29, 161);
   color: white;
-  padding: 0.9vw;
+  padding: 0.5vw;
   margin-top: 1.7vw;
   margin-left: -2.1vw;
   border-top-left-radius: 30pt;
@@ -64,6 +64,8 @@ select {
   position: absolute;
   bottom: -4.5vw;
   right: 0;
+  font-size: 1.65vw;
+  height: 4vw;
 }
 .create-edit-post-form {
   margin-top: 5vw;
@@ -86,6 +88,8 @@ select {
     font-size: 3.2vw;
   }
   .red-submit {
-    bottom: -9.5vw;
+    height: 7vw;
+    bottom: -8.5vw;
+    font-size: 3vw;
   }
 }
