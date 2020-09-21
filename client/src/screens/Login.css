@@ -5,23 +5,34 @@
   text-align: center;
 }
 .login-register {
-  color: rgb(247, 103, 103);
+  /* color: rgb(247, 103, 103); */
+  color: white;
   text-decoration: none;
   padding: .5vw;
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
   border: 2px solid black;
-  width: 40%;
+  width: 35%;
+  background-color: rgb(90, 15, 90);
+  font-size: 1.5vw;
 }
 .login-submit {
-  width: 60%;
-  background-color: rgb(250, 54, 54);
-  color: yellow;
+  width: 55%;
+  color: white;
   border-top-left-radius: 30pt;
   border-bottom-left-radius: 30pt;
+  background-color: rgb(161, 29, 161);
+  font-size: 1.6vw;
+  border: 2px solid black;
 }
 .login-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 3vw;
+  position: absolute;
+  bottom: -4vw;
+  /* width: 33vw; */
+  width: 100%;
+  left: 0;
+  /* left: -2vw; */
 }

@@ -1,28 +1,33 @@
 .edit-post-heading {
-  margin: 10px;
+  margin: 8px;
 }
 .edit-post-buttons {
   display: flex;
-  margin: 15px;
+  /* margin: 15px; */
   height: 5.5vw;
-
-  width: 29vw;
+  width: 100%;
+  position: absolute;
+  bottom: -4.2vw;
+  margin: 0;
+  left: 0;
+  justify-content: space-between;
 }
 .delete-post-button {
-  width: 45%;
+  width: 30%;
   background-color: #3c1717;
   color: yellow;
-  padding: .9vw 1.3vw .9vw 1.5vw;;
+  padding: .9vw 1.3vw .9vw 1.5vw;
   margin-top: 1.7vw;
   /* margin-left: -2.1vw; */
-  border-top-left-radius: 30pt;
-  border-bottom-left-radius: 30pt;
+  border-top-right-radius: 30pt;
+  border-bottom-right-radius: 30pt;
   text-align: left;
 }
 .edit-post-content-input {
   right: 0;
 }
 #edit-post-submit {
-  width: 75%;
+  width: 65%;
   text-align: center;
+  bottom: 0;
 }

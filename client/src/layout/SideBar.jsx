@@ -35,7 +35,10 @@ export default function SideBar(props) {
                   />
                 </div>
                 <div className='profile-buttons'>
-                  <Link to={`/users/${currentUser.id}`}>
+                  <Link
+                    to={`/users/${currentUser.id}`}
+                    className='profile-links'
+                  >
                     <button className='profile-button prof-edit'>
                       Edit Profile
                     </button>
@@ -68,12 +71,14 @@ export default function SideBar(props) {
         </>
       ) : (
         <div className='guinan-landing'>
-          <Link to='/login'>
-            <button className='sidebar-guinan-button'>Login</button>
-          </Link>
-          <Link to='/register'>
-            <button className='sidebar-guinan-button'>Register</button>
-          </Link>
+          <div className='guinan-buttons'>
+            <Link to='/login'>
+              <button className='sidebar-guinan-button guinan-login'>Login</button>
+            </Link>
+            <Link to='/register'>
+              <button className='sidebar-guinan-button'>Register</button>
+            </Link>
+          </div>
           <p className='welcome'>"Welcome"</p>
           <img src={guinan} alt='guinan' className='guinan-pic' />
         </div>
