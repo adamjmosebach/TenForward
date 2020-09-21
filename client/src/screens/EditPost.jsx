@@ -34,7 +34,7 @@ export default function EditPost(props) {
     return (
       <div>
         <form
-          className='create-edit-post-form'
+          className='create-edit-post-form edit-post-form'
           onSubmit={(e) => {
             e.preventDefault();
             editPostSubmit(id, formData);
