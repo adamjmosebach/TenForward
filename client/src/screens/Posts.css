@@ -1,5 +1,11 @@
 .all-posts {
   display: flex;
   flex-direction: column-reverse;
-    align-content: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 426px) {
+  .all-posts {
+    margin-top: 5vw;
+  }
 }

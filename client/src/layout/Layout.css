@@ -52,6 +52,7 @@
     width: 20vw;
     height: 5vw;
     font-size: 2vw;
+    margin-top: 2vw;
   }
   .layout-guinan-buttons {
     display: flex;
