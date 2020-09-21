@@ -4,8 +4,8 @@ form {
   flex-direction: column;
   align-items: space-between;
   background-color: rgba(29, 29, 29, 0.75);
-  border: 2vw solid rgba(128, 128, 128, .75);
-  border-bottom: 5.5vw solid rgba(128, 128, 128, .75);
+  border: 2vw solid rgba(128, 128, 128, 0.75);
+  border-bottom: 5.5vw solid rgba(128, 128, 128, 0.75);
   padding: 2vw;
   text-align: right;
   position: relative;
@@ -16,20 +16,25 @@ form {
   /* text-decoration: underline; */
   margin: 1.5vw;
   font-weight: 800;
-  font-size: 2vw;
+  font-size: 2.2vw;
   /* color: rgb(250, 234, 54); */
   /* -webkit-text-stroke: 1px red; */
 }
-/* .label {
-  font-size: 1.5vw;
-} */
+label {
+  font-size: 2vw;
+}
 input,
 textarea {
   margin: 1.5vw;
   margin-right: 0;
   width: 15vw;
   border: 1px solid black;
-  padding: .5vw;
+  padding: 0.5vw;
+}
+.label-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 textarea {
   height: 75px;
@@ -40,12 +45,17 @@ textarea {
   align-items: center;
   justify-content: flex-end;
 }
+select {
+  height: 1.9vw;
+  min-height: 25px;
+  max-height: 47px;
+}
 .red-submit {
   width: 50%;
   /* background-color: #fa3636; */
   background-color: rgb(161, 29, 161);
   color: white;
-  padding: .9vw;
+  padding: 0.9vw;
   margin-top: 1.7vw;
   margin-left: -2.1vw;
   border-top-left-radius: 30pt;
@@ -58,4 +68,24 @@ textarea {
 .create-edit-post-form {
   margin-top: 5vw;
   text-align: right;
+}
+
+@media screen and (max-width: 426px) {
+  form {
+    margin-top: 20vw;
+    border-bottom: 10vw solid rgba(128, 128, 128, 0.75);
+  }
+  input,
+  textarea {
+    width: 45vw;
+  }
+  .form-heading {
+    font-size: 4vw;
+  }
+  label {
+    font-size: 3.2vw;
+  }
+  .red-submit {
+    bottom: -8vw;
+  }
 }

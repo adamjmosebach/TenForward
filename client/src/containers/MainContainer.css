@@ -6,3 +6,9 @@
   margin-top: 10vw;
   min-height: 90vh;
 }
+
+@media screen and (max-width: 426px) {
+  .main-container {
+    width: 100vw;
+  }
+}

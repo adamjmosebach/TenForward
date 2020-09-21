@@ -196,31 +196,6 @@
 
 @media screen and (max-width: 426px) {
   .side-bar {
-    all: unset;
-    position: absolute;
-    right: 0;
-    border: none;
-  }
-  .guinan-pic {
     display: none;
-  }
-  .guinan-landing {
-    margin: 0;
-  }
-  .welcome {
-    display: none;
-  }
-  .sidebar-guinan-button {
-    right: 0;
-  }
-  .profile-buttons {
-    
-  }
-  .profile-links {
-    margin: 0;
-  }
-  .guinan-login {
-    border-top-left-radius: 30pt;
-    border-bottom-left-radius: 30pt;
   }
 }
