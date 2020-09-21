@@ -7,12 +7,12 @@ export default function Register(props) {
     username: '',
     email: '',
     password: '',
-    imgUrl: '',
+    img_url: '',
     division: '',
     rank: 'cadet',
   });
   const [passwordConfirm, setPasswordConfirm] = useState('');
-  const { username, email, password, imgUrl } = formData;
+  const { username, email, password, img_url } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -80,12 +80,12 @@ export default function Register(props) {
         />
       </div>
       <div className='label-input'>
-        <label htmlFor='register-imgUrl'>Image URL:</label>
+        <label htmlFor='register-img_url'>Image URL:</label>
         <input
           type='text'
-          name='imgUrl'
-          id='register-imgUrl'
-          value={imgUrl}
+          name='img_url'
+          id='register-img_url'
+          value={img_url}
           onChange={handleChange}
         />
       </div>
@@ -95,9 +95,9 @@ export default function Register(props) {
           <option value='' disabled selected>
             --Select Division--
           </option>
-          <option value='command'>Command</option>
-          <option value='operations'>Operations</option>
-          <option value='science'>Science</option>
+          <option value='Command'>Command</option>
+          <option value='Operations'>Operations</option>
+          <option value='Science'>Science</option>
         </select>
       </div>
       <button className='red-submit'>Submit</button>

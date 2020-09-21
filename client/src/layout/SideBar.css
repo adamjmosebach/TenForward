@@ -27,6 +27,7 @@
 .profile-image {
   width: 100%;
   border: 1px solid rgb(223, 197, 215);
+  background-color: rgba(0, 0, 0, .35);
 }
 .guinan-pic {
   width: 80%;
@@ -181,6 +182,9 @@
   margin-top: 1vw;
   max-width: 220px;
   max-height: 150px;
+}
+.postsNum-span {
+  font-size: 1.25vw;
 }
 
 @media screen and (max-width: 600px) {

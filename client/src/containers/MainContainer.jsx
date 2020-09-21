@@ -16,7 +16,14 @@ import EditProfile from '../screens/EditProfile';
 import './MainContainer.css';
 
 export default function MainContainer(props) {
-  const { currentUser, setFromCreate, updateProfileSubmit, loginSubmit, registerSubmit } = props;
+  const {
+    currentUser,
+    setFromCreate,
+    updateProfileSubmit,
+    loginSubmit,
+    registerSubmit,
+    setPostsNum,
+  } = props;
   const [posts, updatePosts] = useState([]);
   const history = useHistory();
 
@@ -31,6 +38,10 @@ export default function MainContainer(props) {
   const createPostSubmit = async (formData) => {
     const newPost = await postPost(formData);
     updatePosts((prevPosts) => [...prevPosts, newPost]);
+    setPostsNum((prevPostsNum) => {
+      const newPostsNum = prevPostsNum + 1
+      return newPostsNum
+    });
     history.push('/posts');
   };
 
@@ -47,6 +58,10 @@ export default function MainContainer(props) {
     const deleteStatus = await deletePost(id);
     updatePosts((prevPosts) => prevPosts.filter((post) => post.id != id));
     console.log(deleteStatus);
+    setPostsNum((prevPostsNum) => {
+      const newPostsNum = prevPostsNum - 1
+      return newPostsNum
+    });
     history.push('/posts');
   };
 

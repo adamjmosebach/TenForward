@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-    render json: @posts
+    render json: @posts, include: :user
   end
 
   # GET /posts/1
@@ -19,6 +19,7 @@ class PostsController < ApplicationController
     @post.user = @current_user
 
     if @post.save
+      @current_user.posts << @post
       render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
