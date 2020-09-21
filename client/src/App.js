@@ -14,31 +14,46 @@ import {
   removeToken,
   updateUser,
 } from './services/auth';
+import { getOneUser } from './services/users';
 import MainContainer from './containers/MainContainer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [postsNum, setPostsNum] = useState(0);
   const [fromCreate, setFromCreate] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
-      setCurrentUser(userData);
+      const userDataPlusPosts = await getOneUser(userData.id);
+      setCurrentUser(userDataPlusPosts);
       // history.push('/');
     };
     handleVerify();
   }, []);
 
+  useEffect(() => {
+    if (currentUser && currentUser.posts) {
+      setPostsNum(currentUser.posts.length)
+    }
+  }, [currentUser]);
+
+  useEffect(() => {
+    console.log('postsNum in App.js = ',postsNum)
+  }, [postsNum])
+
   const loginSubmit = async (loginData) => {
     const userData = await loginUser(loginData);
-    setCurrentUser(userData);
+    const userDataPlusPosts = await getOneUser(userData.id);
+    setCurrentUser(userDataPlusPosts);
     fromCreate ? history.push('/posts/create') : history.push('/');
   };
 
   const registerSubmit = async (registerData) => {
     const userData = await registerUser(registerData);
-    setCurrentUser(userData);
+    const userDataPlusPosts = await getOneUser(userData.id);
+    setCurrentUser(userDataPlusPosts);
     fromCreate ? history.push('/posts/create') : history.push('/');
   };
 
@@ -55,8 +70,6 @@ function App() {
     history.push('/');
   };
 
-  // console.log('currentUser in App.js is '+currentUser)
-
   return (
     <div className='app' style={{ backgroundImage: `url(${stars})` }}>
       <Layout
@@ -65,7 +78,11 @@ function App() {
         handleLogout={handleLogout}
       >
         <div className='all-not-nav'>
-          <SideBar currentUser={currentUser} handleLogout={handleLogout} />
+          <SideBar
+            currentUser={currentUser}
+            postsNum={postsNum}
+            handleLogout={handleLogout}
+          />
           <div className='allow-for-sidebar'></div>
           <Switch>
             {/* <Route path='/login'>
@@ -81,6 +98,8 @@ function App() {
                 updateProfileSubmit={updateProfileSubmit}
                 loginSubmit={loginSubmit}
                 registerSubmit={registerSubmit}
+                setPostsNum={setPostsNum}
+                postsNum={postsNum}
               />
             </Route>
           </Switch>

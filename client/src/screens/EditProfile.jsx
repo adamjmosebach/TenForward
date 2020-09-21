@@ -105,9 +105,9 @@ export default function EditProfile(props) {
               <option value='' disabled>
                 --Select Division--
               </option>
-              <option value='command'>Command</option>
-              <option value='operations'>Operations</option>
-              <option value='science'>Science</option>
+              <option value='Command'>Command</option>
+              <option value='Operations'>Operations</option>
+              <option value='Science'>Science</option>
             </select>
           </div>
           <div className='label-input'>
