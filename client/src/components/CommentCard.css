@@ -38,3 +38,16 @@
   width: 60%;
   font: 2vw;
 }
+
+@media screen and (max-width: 426px) {
+  .show-comment-content {
+    padding: 0 2vw;
+    font-size: 3vw;
+  }
+  .comment-button-edit,
+  .comment-button-delete {
+    height: 4.62vw;
+    font-size: 2.5vw;
+
+  }
+}
