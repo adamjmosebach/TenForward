@@ -62,6 +62,7 @@ function App() {
       <Layout
         setFromCreate={setFromCreate}
         currentUser={currentUser}
+        handleLogout={handleLogout}
       >
         <div className='all-not-nav'>
           <SideBar currentUser={currentUser} handleLogout={handleLogout} />
