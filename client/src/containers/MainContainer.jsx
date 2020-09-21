@@ -58,6 +58,10 @@ export default function MainContainer(props) {
     const deleteStatus = await deletePost(id);
     updatePosts((prevPosts) => prevPosts.filter((post) => post.id != id));
     console.log(deleteStatus);
+    setPostsNum((prevPostsNum) => {
+      const newPostsNum = prevPostsNum - 1
+      return newPostsNum
+    });
     history.push('/posts');
   };
 

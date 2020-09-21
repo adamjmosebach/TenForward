@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './SideBar.css';
 import guinan from '../assets/guinan.jpg';
 import lcarsCommunique from '../assets/lcarsCommunique.gif';
+import starfleetInsignia from '../assets/starfleetInsignia.png'
 
 export default function SideBar(props) {
   const { currentUser, postsNum, handleLogout } = props;
@@ -47,13 +48,13 @@ export default function SideBar(props) {
             <div className='side-bar-main'>
               <div className='profile-info'>
                 <p className='profile-name'>{currentUser.username}</p>
-                <p className='profile-stats'>Rank: {rank} / Posts: {postsNum ? postsNum : 0} </p>
+                <p className='profile-stats'>Rank: {rank} <span className='postsNum-span'>/ Posts: {postsNum ? postsNum : 0}</span></p>
                 <p className='profile-stats'>
                   Division: {currentUser.division}
                 </p>
                 <div className='profile-image-container'>
                   <img
-                    src={currentUser.img_url}
+                    src={currentUser.img_url ? currentUser.img_url : starfleetInsignia}
                     alt="user's profile"
                     className='profile-image'
                   />
