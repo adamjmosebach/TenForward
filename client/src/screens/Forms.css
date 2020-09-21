@@ -16,13 +16,13 @@ form {
   /* text-decoration: underline; */
   margin: 1.5vw;
   font-weight: 800;
-  font-size: 2vw;
+  font-size: 2.2vw;
   /* color: rgb(250, 234, 54); */
   /* -webkit-text-stroke: 1px red; */
 }
-/* .label {
-  font-size: 1.5vw;
-} */
+label {
+  font-size: 2vw;
+}
 input,
 textarea {
   margin: 1.5vw;
@@ -30,6 +30,11 @@ textarea {
   width: 15vw;
   border: 1px solid black;
   padding: .5vw;
+}
+.label-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 textarea {
   height: 75px;
@@ -39,6 +44,11 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+select {
+  height: 1.9vw;
+  min-height: 25px;
+  max-height: 47px;
 }
 .red-submit {
   width: 50%;

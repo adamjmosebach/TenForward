@@ -31,7 +31,7 @@ export default function Login(props) {
       >
         <h3 className='form-heading'>Login</h3>
         <div className='label-input'>
-          <label htmlFor='login-username'>Username:</label>
+          <label htmlFor='form-label login-username'>Username:</label>
           <input
             type='text'
             name='username'
@@ -41,7 +41,7 @@ export default function Login(props) {
           />
         </div>
         <div className='label-input'>
-          <label htmlFor='login-password'>Password:</label>
+          <label htmlFor='form-label login-password'>Password:</label>
           <input
             type='password'
             name='password'
