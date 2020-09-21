@@ -30,6 +30,7 @@ textarea {
   width: 15vw;
   border: 1px solid black;
   padding: 0.5vw;
+  font-size: 1.75vw;
 }
 .label-input {
   display: flex;
