@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-    render json: @posts
+    render json: @posts, include: :user
   end
 
   # GET /posts/1

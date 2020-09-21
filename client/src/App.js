@@ -26,8 +26,12 @@ function App() {
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
-      const userDataPlusPosts = await getOneUser(userData.id);
-      setCurrentUser(userDataPlusPosts);
+      if (userData) {
+        const userDataPlusPosts = await getOneUser(userData.id);
+        setCurrentUser(userDataPlusPosts);
+      } else {
+        setCurrentUser(userData)
+      }
       // history.push('/');
     };
     handleVerify();

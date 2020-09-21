@@ -26,6 +26,8 @@ export default function DetailPost(props) {
       post_id: thePost.id,
       user_id: currentUser.id,
     });
+    // console.log('thePost author is = ',thePost.user_id)
+    console.log('thePost is = ',thePost)
   };
 
   const handleCommentSubmit = async () => {

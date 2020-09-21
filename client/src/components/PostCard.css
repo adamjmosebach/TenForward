@@ -116,6 +116,7 @@
   }
   .post-image-container {
     align-self: center;
+    /* width: 100%; */
   }
   .postcard-button {
     height: 4.25vw;
