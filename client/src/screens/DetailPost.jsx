@@ -42,7 +42,7 @@ export default function DetailPost(props) {
         <div className='detail-hero-content'>
           <h3 className='detail-title'>{thePost.title}</h3>
           <h4 className='detail-content'>{thePost.content}</h4>
-          <div className='post-image-container'>
+          <div className='post-detail-image-container'>
             <img src={thePost.img_url} className='post-image' />
           </div>
         </div>
