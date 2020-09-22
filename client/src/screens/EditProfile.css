@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 426px) {
-  .mobile-profile-display {
+  /* .mobile-profile-display {
     display: flex;
   }
   .mobile-profile-pic-container {
@@ -14,5 +14,9 @@
   }
   .mobile-profile-pic {
     width: 100%;
-  }
-}
+  } */
+  /* .mobile-profile-info {
+    color: green;
+    font-size: 2.5vw;
+  }*/
+} 

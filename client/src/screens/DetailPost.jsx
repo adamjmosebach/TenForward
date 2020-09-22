@@ -19,6 +19,7 @@ export default function DetailPost(props) {
       console.log('in Detail, matchingPost = ', matchingPost);
       setThePost(matchingPost);
       setAuthor(matchingPost.user.username)
+      // console.log('DP-author = ',matchingPost.user.username)
     };
     fetchOnePost(id);
   }, []);
@@ -39,7 +40,7 @@ export default function DetailPost(props) {
     history.push(`/posts/${thePost.id}`);
   };
 
-  if (thePost && author) {
+  if (thePost) {
     return (
       <div className='post-detail-div'>
         {/* <h3>Post Detail</h3>
@@ -80,7 +81,7 @@ export default function DetailPost(props) {
           <button className='post-comment-submit'>Post Your Comment</button>
           {/* </Link> */}
         </form>
-        {author && <div className='detail-author'>post by: {author}</div>}
+        <div className='detail-author'>post by: {author}</div>
       </div>
     );
   } else {
