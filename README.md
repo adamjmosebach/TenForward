@@ -94,13 +94,15 @@
 
 [Profile](https://i.imgur.com/A66ngvG.png)
 
-
+<br>
 
 ### Component Tree
 
 ##### - Original Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q) -
 
 <!-- ![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png) -->
+
+<br>
 
 ### Component Hierarchy
 
@@ -135,6 +137,7 @@ src
 |__ index.js
       
 ```
+<br>
 
 ### Component Breakdown
 
@@ -153,6 +156,8 @@ src
 |    Posts    | functional |   n   |   y   | Displays all posts  |
 |    Register    | functional |   y   |   y   | Register for the site |
 |    App    | functional |   y   |   n   | Functions for auth and user manipulation, passing down props |
+
+<br>
 
 ### Time Estimates
 
@@ -200,12 +205,16 @@ src
 
 ***
 
+<br>
+
 ## Code Showcase
 
 ```
 fromCreate ? history.push('/posts/create') : history.push('/');
 ```
 It's so simple, but I'm really proud of it.  When a user who is not logged in clicks 'Create Post', they are taken to the login page _and_ a state variable is set, indicating that the user got to the login page via the 'Create Post' button. Once the user logs in, instead of being redirected to the main page as normal they are taken through to the create page like they originally wanted, where the state variable is reset.
+
+<br>
 
 ## Code Issues & Resolutions
 
