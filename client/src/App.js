@@ -30,7 +30,7 @@ function App() {
         const userDataPlusPosts = await getOneUser(userData.id);
         setCurrentUser(userDataPlusPosts);
       } else {
-        setCurrentUser(userData)
+        setCurrentUser(userData);
       }
       // history.push('/');
     };
@@ -39,32 +39,49 @@ function App() {
 
   useEffect(() => {
     if (currentUser && currentUser.posts) {
-      setPostsNum(currentUser.posts.length)
+      setPostsNum(currentUser.posts.length);
     }
   }, [currentUser]);
 
-  useEffect(() => {
-    console.log('postsNum in App.js = ',postsNum)
-  }, [postsNum])
+  // useEffect(() => {
+  //   console.log('postsNum in App.js = ',postsNum)
+  // }, [postsNum])
 
   const loginSubmit = async (loginData) => {
-    const userData = await loginUser(loginData);
-    const userDataPlusPosts = await getOneUser(userData.id);
-    setCurrentUser(userDataPlusPosts);
-    fromCreate ? history.push('/posts/create') : history.push('/');
+    try {
+      const userData = await loginUser(loginData);
+      console.log('llll', userData);
+      // if (userData) {
+      const userDataPlusPosts = await getOneUser(userData.id);
+      setCurrentUser(userDataPlusPosts);
+      fromCreate ? history.push('/posts/create') : history.push('/');
+    } catch (err) {
+      // } else {
+      //   alert('Login Failed')
+      // }
+      alert(err)
+    }
   };
 
   const registerSubmit = async (registerData) => {
-    const userData = await registerUser(registerData);
-    const userDataPlusPosts = await getOneUser(userData.id);
-    setCurrentUser(userDataPlusPosts);
-    fromCreate ? history.push('/posts/create') : history.push('/');
+    try {
+      const userData = await registerUser(registerData);
+      const userDataPlusPosts = await getOneUser(userData.id);
+      setCurrentUser(userDataPlusPosts);
+      fromCreate ? history.push('/posts/create') : history.push('/');
+    } catch (err) {
+      alert(err)
+    }
   };
 
   const updateProfileSubmit = async (userId, formData) => {
-    const userData = await updateUser(userId, formData);
-    setCurrentUser(userData);
-    history.push('/');
+    try {
+      const userData = await updateUser(userId, formData);
+      setCurrentUser(userData);
+      history.push('/');
+    } catch (err) {
+      alert(err)
+    }
   };
 
   const handleLogout = () => {

@@ -9,7 +9,7 @@ export default function Register(props) {
     password: '',
     img_url: '',
     division: '',
-    rank: 'cadet',
+    // rank: 'cadet',
   });
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const { username, email, password, img_url } = formData;
