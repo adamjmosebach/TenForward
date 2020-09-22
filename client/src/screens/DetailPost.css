@@ -68,8 +68,9 @@
 }
 .detail-author {
   background-color: rgb(245, 223, 182);
-  padding: .75vw;
+  padding: .75vw 1.5vw;
   align-self: flex-end;
+  font-size: 2.2vw;
   /* border-top-left-radius: 30pt;
   border-bottom-left-radius: 30pt; */
 }
@@ -77,6 +78,7 @@
 @media screen and (max-width: 426px) {
   .post-detail-div {
     width: 85vw;
+    margin: 0;
   }
   /* .detail-content {
     width: 75vw;
