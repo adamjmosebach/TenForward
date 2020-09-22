@@ -41,6 +41,7 @@
 .post-comment-submit {
   width: 23vw;
   height: 25%;
+  line-height: 25%;
   /* margin: 0 auto; */
   padding: 1vw;
   border-top-right-radius: 30pt;
@@ -66,11 +67,11 @@
   color: pink;
 }
 .detail-author {
-  background-color: rgb(233, 183, 91);
+  background-color: rgb(245, 223, 182);
   padding: .75vw;
   align-self: flex-end;
-  border-top-left-radius: 30pt;
-  border-bottom-left-radius: 30pt;
+  /* border-top-left-radius: 30pt;
+  border-bottom-left-radius: 30pt; */
 }
 
 @media screen and (max-width: 426px) {
