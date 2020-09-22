@@ -39,7 +39,7 @@ export default function EditProfile(props) {
 
   if (currentUser) {
     return (
-      <div>
+      <div className='edit-profile-div'>
         <form
           onSubmit={(e) => {
             e.preventDefault();
