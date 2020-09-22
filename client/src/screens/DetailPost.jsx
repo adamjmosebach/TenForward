@@ -17,8 +17,8 @@ export default function DetailPost(props) {
     const fetchOnePost = async (id) => {
       const matchingPost = await getOnePost(id);
       console.log('in Detail, matchingPost = ', matchingPost);
-      setThePost(matchingPost);
       setAuthor(matchingPost.user.username)
+      setThePost(matchingPost);
       // console.log('DP-author = ',matchingPost.user.username)
     };
     fetchOnePost(id);
