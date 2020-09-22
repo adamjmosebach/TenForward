@@ -78,7 +78,7 @@ export default function DetailPost(props) {
           <button className='post-comment-submit'>Post Your Comment</button>
           {/* </Link> */}
         </form>
-        <div className='detail-author'>post by: {thePost.user.username}</div>
+        {thePost.user && <div className='detail-author'>post by: {thePost.user.username}</div>}
       </div>
     );
   } else {

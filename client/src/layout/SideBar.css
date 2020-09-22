@@ -183,8 +183,10 @@
   max-width: 220px;
   max-height: 150px;
 }
-.postsNum-span {
+.postsNum-display {
   font-size: 1.25vw;
+  margin: 0;
+  color: rgb(223, 197, 215);
 }
 
 @media screen and (max-width: 600px) {
