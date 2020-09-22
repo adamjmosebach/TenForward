@@ -15,6 +15,7 @@ export default function DetailPost(props) {
   useEffect(() => {
     const fetchOnePost = async (id) => {
       const matchingPost = await getOnePost(id);
+      console.log('in Detail, matchingPost = ', matchingPost);
       setThePost(matchingPost);
     };
     fetchOnePost(id);
@@ -27,7 +28,7 @@ export default function DetailPost(props) {
       user_id: currentUser.id,
     });
     // console.log('thePost author is = ',thePost.user_id)
-    console.log('thePost is = ',thePost)
+    console.log('thePost is = ', thePost);
   };
 
   const handleCommentSubmit = async () => {
@@ -42,11 +43,15 @@ export default function DetailPost(props) {
         {/* <h3>Post Detail</h3>
         <h3>(Post #{thePost.id})</h3> */}
         <div className='detail-hero-content'>
-          <h3 className='detail-title'>{thePost.title}</h3>
-          <h4 className='detail-content'>{thePost.content}</h4>
-          <div className='post-detail-image-container'>
-            <img src={thePost.img_url} className='post-image' />
-          </div>
+          {thePost.title && <h3 className='detail-title'>{thePost.title}</h3>}
+          {thePost.content && (
+            <h4 className='detail-content'>{thePost.content}</h4>
+          )}
+          {thePost.img_url && (
+            <div className='post-detail-image-container'>
+              <img src={thePost.img_url} className='post-image' />
+            </div>
+          )}
         </div>
         {thePost.comments &&
           thePost.comments.map((comment) => (
@@ -73,6 +78,7 @@ export default function DetailPost(props) {
           <button className='post-comment-submit'>Post Your Comment</button>
           {/* </Link> */}
         </form>
+        <div className='detail-author'>post by: {thePost.user.username}</div>
       </div>
     );
   } else {

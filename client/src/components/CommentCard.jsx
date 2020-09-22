@@ -28,7 +28,7 @@ export default function CommentCard(props) {
       post_id: thePost.id,
       user_id: currentUser.id,
     });
-    console.log(updateComment);
+    // console.log(updateComment);
   };
 
   if (currentUser && thePost && comment) {
