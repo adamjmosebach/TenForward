@@ -9,10 +9,10 @@ export default function Register(props) {
     password: '',
     img_url: '',
     division: '',
-    // rank: 'cadet',
+    name: '',
   });
   const [passwordConfirm, setPasswordConfirm] = useState('');
-  const { username, email, password, img_url } = formData;
+  const { username, email, password, img_url, name } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,6 +56,16 @@ export default function Register(props) {
           name='email'
           id='register-email'
           value={email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className='label-input'>
+        <label htmlFor='register-name'>Name:</label>
+        <input
+          type='text'
+          name='name'
+          id='register-name'
+          value={name}
           onChange={handleChange}
         />
       </div>

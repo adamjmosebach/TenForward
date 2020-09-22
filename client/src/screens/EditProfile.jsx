@@ -11,7 +11,7 @@ export default function EditProfile(props) {
     password: '',
     img_url: '',
     division: '',
-    // rank: '',
+    name: '',
   });
 
   useEffect(() => {
@@ -22,13 +22,13 @@ export default function EditProfile(props) {
         password: currentUser.password,
         img_url: currentUser.img_url,
         division: currentUser.division,
-        rank: currentUser.rank,
+        name: currentUser.name,
       });
     }
   }, [currentUser]);
 
   // const [passwordConfirm, setPasswordConfirm] = useState('');
-  const { username, email, password, img_url, division } = formData;
+  const { username, email, password, img_url, division, name } = formData;
   // const { username, email, img_url, division } = formData;
 
   const handleChange = (e) => {
@@ -74,6 +74,16 @@ export default function EditProfile(props) {
               name='email'
               id='update-profile-email'
               value={email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className='label-input'>
+            <label htmlFor='update-profile-name'>Name:</label>
+            <input
+              type='text'
+              name='name'
+              id='update-profile-name'
+              value={name}
               onChange={handleChange}
             />
           </div>

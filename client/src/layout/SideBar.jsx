@@ -47,7 +47,7 @@ export default function SideBar(props) {
             </div>
             <div className='side-bar-main'>
               <div className='profile-info'>
-                <p className='profile-name'>{currentUser.username}</p>
+                <p className='profile-name'>{currentUser.name ? currentUser.name : currentUser.username}</p>
                 <p className='profile-stats'>Rank: {rank}</p>
                   <p className='postsNum-display'>Posts: {postsNum ? postsNum : 0}</p>
                 {currentUser.division && <p className='profile-stats'>Division: {currentUser.division} </p>}
