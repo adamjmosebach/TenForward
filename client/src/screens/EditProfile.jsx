@@ -73,16 +73,6 @@ export default function EditProfile(props) {
               onChange={handleChange}
             />
           </div>
-
-          {/* <label>
-          Password Confirm:
-          <input
-            type='password'
-            name='passwordConfirm'
-            value={passwordConfirm}
-            onChange={e => handlePWConfirm(e)}
-          />
-        </label> */}
           <div className='label-input'>
             <label className='update-profile-img_url'>Image URL:</label>
             <input
@@ -124,6 +114,14 @@ export default function EditProfile(props) {
           </div>
           <button className='red-submit'>Update</button>
         </form>
+        <div className='mobile-profile-display'>
+          <div className='mobile-profile-pic-container'>
+            <img src={currentUser.img_url} className='mobile-profile-pic' />
+          </div>
+          <div className='mobile-profile-info'>
+
+          </div>
+        </div>
       </div>
     );
   } else {
