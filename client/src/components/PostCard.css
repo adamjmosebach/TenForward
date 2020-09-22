@@ -7,14 +7,14 @@
   margin-left: 8vw;
   border-radius: 5px;
   padding: 2vw;
-  background-color: rgba(128, 128, 128, .75);
+  background-color: rgba(128, 128, 128, 0.75);
   width: 30vw;
   align-items: center;
   color: white;
   border-radius: 2%;
 }
 .post-card-content {
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 1vw;
   /* padding-bottom: -4vw; */
   border-radius: 2%;
@@ -24,7 +24,7 @@
 }
 .post-image-container {
   width: 100%;
-  margin-bottom: .5vw;
+  margin-bottom: 0.5vw;
 }
 .post-image {
   width: 100%;
@@ -45,50 +45,57 @@
   align-self: flex-end;
   align-items: flex-end;
   margin-top: 1vw;
-  width: 60%;
+  width: 100%;
+}
+.postcard-button-row {
+  display: flex;
+  margin: 0.2vw 0;
+  align-items: center;
+  width: 100%;
+  /* background-color: black;
+  padding: 10px; */
 }
 .postcard-button {
   border-top-right-radius: 20pt;
   border-bottom-right-radius: 20pt;
   /* padding: 1vw; */
-  width: 20vw;
+  width: 100%;
   border: 2px solid black;
   height: 3vw;
   align-items: center;
   line-height: 2.5vw;
 }
-.postcard-button-row {
-  display: flex;
-  margin: .2vw 0;
-  align-items: center;
-  /* background-color: black;
-  padding: 10px; */
-}
 .pcb-edit {
-  background-color:rgb(244, 148, 244); 
+  background-color: rgb(244, 148, 244);
 }
 .pcb-comments {
   background-color: rgb(250, 202, 151);
 }
 .pcb-spacer-1 {
-  width: 100%;
+  width: 30%;
   border: 2px solid black;
   height: 3vw;
   /* margin-top: 1.5vw; */
   /* margin-top: vw; */
 }
+.by-line {
+  margin: 0;
+  color: black;
+  font-size: 1vw;
+}
 .pcb-spacer-2 {
-  width: 10vw;
+  width: 10%;
 }
 .pcb-s-edit {
-  background-color:rgb(244, 148, 244); 
+  background-color: rgb(244, 148, 244);
 }
 .pcb-s-comments {
-  background-color:rgb(250, 202, 151);
+  background-color: rgb(250, 202, 151);
 }
 .postcard-button-link {
   margin: 0;
-  display: flex;
+  width: 100%;
+  /* display: flex; */
   /* align-items: center; */
   text-decoration: none;
 }
@@ -120,7 +127,7 @@
   }
   .postcard-button {
     height: 4.25vw;
-    margin: .35vw;
+    margin: 0.35vw;
   }
   .pcb-spacer-1 {
     height: 4.25vw;

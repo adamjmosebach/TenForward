@@ -13,12 +13,13 @@
 .detail-title {
   text-decoration: underline;
   font-size: 2.3vw;
+  margin: 1.5vw;
 }
 .post-detail-image-container {
-  margin-bottom: 35px;
+  margin: 1vw;
 }
 .detail-content {
-  margin: 15px 0 35px;
+  margin: 1vw;
   font-size: 1.9vw;
 }
 .comment-form {
@@ -38,12 +39,14 @@
   padding: .5vw;
 }
 .post-comment-submit {
-  width: 40%;
+  width: 23vw;
+  height: 5vw;
   /* margin: 0 auto; */
   padding: 1vw;
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
   background-color: plum;
+  font-size: 2vw;
 }
 .detail-hero-content {
   width: 80%;
@@ -61,6 +64,13 @@
 }
 .detail-content {
   color: pink;
+}
+.detail-author {
+  background-color: rgb(233, 183, 91);
+  padding: .75vw;
+  align-self: flex-end;
+  border-top-left-radius: 30pt;
+  border-bottom-left-radius: 30pt;
 }
 
 @media screen and (max-width: 426px) {
