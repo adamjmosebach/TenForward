@@ -1,13 +1,14 @@
 # TenForward
 
-### Deployed site at https://tenforward.netlify.app/
-### Backend at https://tenforward-api.herokuapp.com/ -> /users, /posts, /comments
+### Deployed site at: https://tenforward.netlify.app/
+### Backend at: https://tenforward-api.herokuapp.com/ -> /users, /posts, /comments
 
 <br>
 
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
+  - [Tech Stack](#teck-stack)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
@@ -30,7 +31,6 @@
 <br>
 
 ## MVP
-<br>
 
 ### Goals
 
@@ -45,8 +45,10 @@
 
 ### Tech Stack
 
-React front end
-Ruby on Rails back end
+- React front end
+- Ruby on Rails back end
+
+<br>
 
 ### Libraries and Dependencies
 
@@ -141,16 +143,16 @@ src
 |  CommentCard   | functional |   y   |   y   | Basic layout for a comment            |
 |  PostCard   | functional |   n   |   y   | Basic layout of a post              |
 | MainContainer    |   functional    |   y   |   y   | Axios call for all posts, functions for manipulating posts, passing down props     |
-|    Layout  | functional |   n   |   y   | Will conitionally display Guinan/Login/Register or your profile info/edit profile/logout       |
-|    SideBar  | functional |   y   |   y   | Either Guinan or your profile       |
+|    Layout  | functional |   n   |   y   |   Site logo and the create post button    |
+|    SideBar  | functional |   y   |   y   |  Will conditionally display Guinan/Login/Register or your profile info/edit profile/logout      |
 |    CreatePost    | functional |   y   |   y   | Create a post |
-|    DetailPost    | functional |   y   |   y   | Details on a specific post |
+|    DetailPost    | functional |   y   |   y   | Details on a specific post, including comments |
 |    EditPost    | functional |   y   |   y   | Edit or delete a post |
-|    EditProfile | functional |   y   |   y   | Post information and comments                |
-|    Login    | functional |   y   |   y   | Log into your profile |
-|    Posts    | functional |   n   |   y   | Displays all posts and comments |
+|    EditProfile | functional |   y   |   y   | Change your personal info                |
+|    Login    | functional |   y   |   y   | Log in as you |
+|    Posts    | functional |   n   |   y   | Displays all posts  |
 |    Register    | functional |   y   |   y   | Register for the site |
-|    App    | functional |   y   |   n   | Register for the site |
+|    App    | functional |   y   |   n   | Functions for auth and user manipulation, passing down props |
 
 ### Time Estimates
 
