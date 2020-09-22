@@ -4,13 +4,11 @@ import './CommentCard.css';
 
 export default function CommentCard(props) {
   const { comment, currentUser, thePost } = props;
-  // console.log('currentUser in CommentCard = ', currentUser)
   const [newerComment, setNewerComment] = useState(comment.content);
   const [editMode, updateEditMode] = useState(false);
 
   const commentDelete = async () => {
     const deleteStatus = await deleteComment(thePost.id, comment.id);
-    // thePost.comments.filter((someComment) => someComment.id != comment.id);
     window.location.reload();
   };
 
@@ -28,7 +26,6 @@ export default function CommentCard(props) {
       post_id: thePost.id,
       user_id: currentUser.id,
     });
-    // console.log(updateComment);
   };
 
   if (currentUser && thePost && comment) {
@@ -43,7 +40,9 @@ export default function CommentCard(props) {
               value={newerComment}
               onChange={(e) => handleCommentChange(e)}
             />
-            <button className='red-submit' id='comment-edit-submit'>Submit Comment Change</button>
+            <button className='red-submit' id='comment-edit-submit'>
+              Submit Comment Change
+            </button>
           </form>
         </div>
       );

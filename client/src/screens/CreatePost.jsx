@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Forms.css'
+import './Forms.css';
 
 export default function CreatePost(props) {
   const { setFromCreate, currentUser, createPostSubmit } = props;
@@ -41,7 +41,12 @@ export default function CreatePost(props) {
           />
         </div>
         <div className='label-input textarea-label-input'>
-          <label htmlFor='create-post-content' className='text-area-content-label'>Write your post here:</label>
+          <label
+            htmlFor='create-post-content'
+            className='text-area-content-label'
+          >
+            Write your post here:
+          </label>
           <textarea
             name='content'
             className='create-post-content'

@@ -14,11 +14,8 @@
   margin-top: 5vw;
 }
 .profile-info {
-  /* padding-top: 2%; */
   width: 90%;
-  /* border: 2px solid blue; */
   max-width: 270px;
-  /* font-size: 2vw; */
 }
 .profile-image-container {
   width: 60%;
@@ -27,7 +24,7 @@
 .profile-image {
   width: 100%;
   border: 1px solid rgb(223, 197, 215);
-  background-color: rgba(0, 0, 0, .35);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 .guinan-pic {
   width: 80%;
@@ -79,7 +76,6 @@
 }
 .lcars-top-6 {
   width: 10%;
-  /* height: 25%; */
   background-color: orange;
   border-top-right-radius: 70vw;
   border-top: 2px solid black;
@@ -101,11 +97,6 @@
   border-left: 2px solid black;
   border-right: 2px solid black;
 }
-/* .lcars-side-1a {
-  height: 20vh;
-  border-top-right-radius: 50%;
-  background-color: orange;
-} */
 .lcars-side-2 {
   height: 10vh;
   background-color: rgb(216, 107, 216);
@@ -154,7 +145,6 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-  /* max-width: 210px; */
 }
 .profile-button {
   width: 15vw;
@@ -175,9 +165,6 @@
   display: inline-block;
   width: 20vw;
   height: 15vw;
-  /* position: absolute; */
-  /* left: 2.5vw;
-    bottom: 12vw; */
   opacity: 0.75;
   margin-top: 1vw;
   max-width: 220px;
@@ -194,12 +181,6 @@
     font-size: 2vw;
   }
 }
-/* @media screen and (min-width: 1200px) {
-  .lcars-communique {
-    display: none;
-  }
-} */
-
 @media screen and (max-width: 426px) {
   .side-bar {
     display: none;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Layout.css';
 import TenForwardBanner from '../assets/TenForwardBanner.png';
@@ -23,7 +23,10 @@ export default function Layout(props) {
                 <button className='create-post-button'>Create Post</button>
               </Link>
               <div className='layout-profile-buttons'>
-                <Link to={`/users/${currentUser.id}`} className='layout-profile-links'>
+                <Link
+                  to={`/users/${currentUser.id}`}
+                  className='layout-profile-links'
+                >
                   <button className='layout-profile-button layout-prof-edit'>
                     Edit Profile
                   </button>

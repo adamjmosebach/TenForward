@@ -39,8 +39,8 @@ export default function MainContainer(props) {
     const newPost = await postPost(formData);
     updatePosts((prevPosts) => [...prevPosts, newPost]);
     setPostsNum((prevPostsNum) => {
-      const newPostsNum = prevPostsNum + 1
-      return newPostsNum
+      const newPostsNum = prevPostsNum + 1;
+      return newPostsNum;
     });
     history.push('/posts');
   };
@@ -54,20 +54,17 @@ export default function MainContainer(props) {
   };
 
   const deletePostSubmit = async (id) => {
-    console.log('id in deletePostSubmit = ', id);
     const deleteStatus = await deletePost(id);
-    updatePosts((prevPosts) => prevPosts.filter((post) => post.id != id));
-    console.log(deleteStatus);
+    updatePosts((prevPosts) => prevPosts.filter((post) => post.id !== id));
     setPostsNum((prevPostsNum) => {
-      const newPostsNum = prevPostsNum - 1
-      return newPostsNum
+      const newPostsNum = prevPostsNum - 1;
+      return newPostsNum;
     });
     history.push('/posts');
   };
 
   return (
     <div className='main-container'>
-      {/* <h2>Main Container</h2> */}
       <Switch>
         <Route path='/login'>
           <Login loginSubmit={loginSubmit} />
@@ -89,9 +86,6 @@ export default function MainContainer(props) {
             deletePostSubmit={deletePostSubmit}
           />
         </Route>
-        {/* <Route path='/posts/:id/comments/create'>
-          <CreateComment />
-        </Route> */}
         <Route path='/posts/:id'>
           <DetailPost currentUser={currentUser} />
         </Route>
@@ -101,7 +95,6 @@ export default function MainContainer(props) {
             updateProfileSubmit={updateProfileSubmit}
           />
         </Route>
-
         <Route path='/'>
           <Posts posts={posts} currentUser={currentUser} />
         </Route>

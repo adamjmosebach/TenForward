@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './EditProfile.css'
-import './Forms.css'
+import './EditProfile.css';
+import './Forms.css';
 
 export default function EditProfile(props) {
   const { currentUser, updateProfileSubmit } = props;
@@ -27,9 +27,7 @@ export default function EditProfile(props) {
     }
   }, [currentUser]);
 
-  // const [passwordConfirm, setPasswordConfirm] = useState('');
   const { username, email, password, img_url, division, name } = formData;
-  // const { username, email, img_url, division } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,10 +36,6 @@ export default function EditProfile(props) {
       [name]: value,
     }));
   };
-
-  // const handlePWConfirm = e => {
-  //   setPasswordConfirm(e.target.value);
-  // };
 
   if (currentUser) {
     return (
@@ -52,10 +46,10 @@ export default function EditProfile(props) {
             if (password) {
               updateProfileSubmit(currentUser.id, formData);
             } else {
-              alert('You must confirm your password')
+              alert('You must confirm your password');
             }
           }}
-          >
+        >
           <h3 className='form-heading'>Edit Profile</h3>
           <div className='label-input'>
             <label htmlFor='update-profile-username'>Username:</label>
@@ -128,19 +122,6 @@ export default function EditProfile(props) {
           </div>
           <button className='red-submit'>Update</button>
         </form>
-        {/* <div className='mobile-profile-display'>
-          <div className='mobile-profile-pic-container'>
-            <img src={currentUser.img_url} className='mobile-profile-pic' />
-          </div>
-          <div className='mobile-profile-info'>
-            <div className='mobile-profile-info-details'>
-              <p className='mobile-prof-stat'>Name: {currentUser.username}</p>
-              <p className='mobile-prof-stat'>Rank:</p>
-              <p className='mobile-prof-stat'></p>
-              <p className='mobile-prof-stat'></p>
-            </div>
-          </div>
-        </div> */}
       </div>
     );
   } else {

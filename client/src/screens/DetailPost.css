@@ -1,5 +1,5 @@
 .post-detail-div {
-  background-color: rgba(128, 128, 128, .75);
+  background-color: rgba(128, 128, 128, 0.75);
   width: 63%;
   text-align: center;
   display: flex;
@@ -25,24 +25,19 @@
 .comment-form {
   width: 80%;
   padding: 0;
-  /* padding-bottom: 1.5vw; */
-  margin-top: .9vw;
+  margin-top: 0.9vw;
   border: 1px solid black;
   box-shadow: 2px 2px 2px rgb(63, 63, 63);
 }
 #comment-textarea {
   width: 92%;
   border: 1px solid black;
-  /* display: flex;
-  flex-direction: column;
-  align-content: center; */
-  padding: .5vw;
+  padding: 0.5vw;
 }
 .post-comment-submit {
   width: 23vw;
   height: 25%;
   line-height: 25%;
-  /* margin: 0 auto; */
   padding: 1vw;
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
@@ -51,7 +46,7 @@
 }
 .detail-hero-content {
   width: 80%;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 1vw;
   padding-bottom: 0;
   border-radius: 2%;
@@ -68,11 +63,9 @@
 }
 .detail-author {
   background-color: rgb(245, 223, 182);
-  padding: .75vw 1.5vw;
+  padding: 0.75vw 1.5vw;
   align-self: flex-end;
   font-size: 2.2vw;
-  /* border-top-left-radius: 30pt;
-  border-bottom-left-radius: 30pt; */
 }
 
 @media screen and (max-width: 426px) {
@@ -80,9 +73,6 @@
     width: 85vw;
     margin: 0;
   }
-  /* .detail-content {
-    width: 75vw;
-  } */
   .post-detail-image-container {
     width: 90%;
     margin-bottom: 35px;
@@ -100,4 +90,4 @@
   #comment-textarea {
     padding: 1vw;
   }
-} 
+}

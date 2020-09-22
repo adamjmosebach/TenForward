@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import './SideBar.css';
 import guinan from '../assets/guinan.jpg';
 import lcarsCommunique from '../assets/lcarsCommunique.gif';
-import starfleetInsignia from '../assets/starfleetInsignia.png'
+import starfleetInsignia from '../assets/starfleetInsignia.png';
 
 export default function SideBar(props) {
   const { currentUser, postsNum, handleLogout } = props;
   const [rank, setRank] = useState('');
 
   useEffect(() => {
-    console.log('postsNum in side bar =',postsNum)
     if (currentUser) {
       let numPosts = postsNum;
       numPosts < 5
@@ -27,13 +26,10 @@ export default function SideBar(props) {
         ? setRank('Captain')
         : setRank('Admiral');
     }
-    // console.log(`currentUser has ${currentUser.posts.length} posts`)
-    console.log(`currentUser = ${currentUser}`);
   }, [currentUser, postsNum]);
 
   return (
     <div className='side-bar'>
-      {/* <h2>Side Bar</h2> */}
       {currentUser ? (
         <>
           <div className='lcars'>
@@ -47,13 +43,25 @@ export default function SideBar(props) {
             </div>
             <div className='side-bar-main'>
               <div className='profile-info'>
-                <p className='profile-name'>{currentUser.name ? currentUser.name : currentUser.username}</p>
+                <p className='profile-name'>
+                  {currentUser.name ? currentUser.name : currentUser.username}
+                </p>
                 <p className='profile-stats'>Rank: {rank}</p>
-                  <p className='postsNum-display'>Posts: {postsNum ? postsNum : 0}</p>
-                {currentUser.division && <p className='profile-stats'>Division: {currentUser.division} </p>}
+                <p className='postsNum-display'>
+                  Posts: {postsNum ? postsNum : 0}
+                </p>
+                {currentUser.division && (
+                  <p className='profile-stats'>
+                    Division: {currentUser.division}{' '}
+                  </p>
+                )}
                 <div className='profile-image-container'>
                   <img
-                    src={currentUser.img_url ? currentUser.img_url : starfleetInsignia}
+                    src={
+                      currentUser.img_url
+                        ? currentUser.img_url
+                        : starfleetInsignia
+                    }
                     alt="user's profile"
                     className='profile-image'
                   />

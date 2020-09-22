@@ -73,10 +73,15 @@ export default function EditPost(props) {
             />
           </div>
           <div className='edit-post-buttons'>
-            <button className='delete-post-button' onClick={() => deletePostSubmit(id)}>
+            <button
+              className='delete-post-button'
+              onClick={() => deletePostSubmit(id)}
+            >
               Delete Post
             </button>
-            <button className='red-submit' id='edit-post-submit'>Looks Good</button>
+            <button className='red-submit' id='edit-post-submit'>
+              Looks Good
+            </button>
           </div>
         </form>
       </div>

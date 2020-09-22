@@ -5,10 +5,9 @@
   text-align: center;
 }
 .login-register {
-  /* color: rgb(247, 103, 103); */
   color: white;
   text-decoration: none;
-  padding: .5vw;
+  padding: 0.5vw;
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
   border: 2px solid black;

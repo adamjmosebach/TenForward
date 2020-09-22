@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
-import './Forms.css'
+import './Forms.css';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -101,7 +101,12 @@ export default function Register(props) {
       </div>
       <div className='label-input division-div'>
         <label htmlFor='register-division'>Division:</label>
-        <select name='division' className='division' id='register-division' onChange={handleChange}>
+        <select
+          name='division'
+          className='division'
+          id='register-division'
+          onChange={handleChange}
+        >
           <option value='' disabled selected>
             --Select Division--
           </option>

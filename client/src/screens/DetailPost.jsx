@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useHistory } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
 import { postComment } from '../services/comments';
 import CommentCard from '../components/CommentCard';
@@ -9,17 +9,15 @@ export default function DetailPost(props) {
   const { currentUser } = props;
   const { id } = useParams();
   const [thePost, setThePost] = useState(null);
-  const [author, setAuthor] = useState(null)
+  const [author, setAuthor] = useState(null);
   const [newComment, setNewComment] = useState('');
   const history = useHistory();
 
   useEffect(() => {
     const fetchOnePost = async (id) => {
       const matchingPost = await getOnePost(id);
-      console.log('in Detail, matchingPost = ', matchingPost);
       setThePost(matchingPost);
-      setAuthor(matchingPost.user.username)
-      // console.log('DP-author = ',matchingPost.user.username)
+      setAuthor(matchingPost.user.username);
     };
     fetchOnePost(id);
   }, []);
@@ -30,8 +28,6 @@ export default function DetailPost(props) {
       post_id: thePost.id,
       user_id: currentUser.id,
     });
-    // console.log('thePost author is = ',thePost.user_id)
-    console.log('thePost is = ', thePost);
   };
 
   const handleCommentSubmit = async () => {
@@ -43,8 +39,6 @@ export default function DetailPost(props) {
   if (thePost) {
     return (
       <div className='post-detail-div'>
-        {/* <h3>Post Detail</h3>
-        <h3>(Post #{thePost.id})</h3> */}
         <div className='detail-hero-content'>
           {thePost.title && <h3 className='detail-title'>{thePost.title}</h3>}
           {thePost.content && (
@@ -65,11 +59,6 @@ export default function DetailPost(props) {
               thePost={thePost}
             />
           ))}
-        {/* {currentUser && thePost.user_id === currentUser.id && (
-          <Link to={`/posts/${thePost.id}/edit`}>
-            <button>Edit this Post</button>
-          </Link>
-        )} */}
         <form className='comment-form' onSubmit={handleCommentSubmit}>
           <textarea
             id='comment-textarea'
@@ -77,9 +66,7 @@ export default function DetailPost(props) {
             placeholder='Your Comment Here...'
             onChange={(e) => handleCommentChange(e)}
           />
-          {/* <Link to={`/posts/${thePost.id}/comments/create`}> */}
           <button className='post-comment-submit'>Post Your Comment</button>
-          {/* </Link> */}
         </form>
         {author && <div className='detail-author'>post by: {author}</div>}
       </div>

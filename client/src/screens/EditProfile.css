@@ -1,22 +1,6 @@
 .edit-profile-division {
   margin: 2vw 0 2vw 12px;
-} 
+}
 .mobile-profile-display {
   display: none;
 }
-
-@media screen and (max-width: 426px) {
-  /* .mobile-profile-display {
-    display: flex;
-  }
-  .mobile-profile-pic-container {
-    width: 35vw;
-  }
-  .mobile-profile-pic {
-    width: 100%;
-  } */
-  /* .mobile-profile-info {
-    color: green;
-    font-size: 2.5vw;
-  }*/
-} 

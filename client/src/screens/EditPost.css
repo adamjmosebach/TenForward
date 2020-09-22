@@ -3,7 +3,6 @@
 }
 .edit-post-buttons {
   display: flex;
-  /* margin: 15px; */
   height: 5.1vw;
   width: 100%;
   position: absolute;
@@ -17,10 +16,7 @@
   width: 30%;
   background-color: #3c1717;
   color: yellow;
-  /* padding: 0.9vw 1.3vw 0.9vw 1.5vw; */
-  /* padding: .5vw; */
   margin-top: 1vw;
-  /* margin-left: -2.1vw; */
   border-top-right-radius: 30pt;
   border-bottom-right-radius: 30pt;
   text-align: center;
@@ -38,7 +34,6 @@
 
 @media screen and (max-width: 426px) {
   .edit-post-buttons {
-    /* bottom: -8vw; */
     align-items: baseline;
   }
   .delete-post-button {
