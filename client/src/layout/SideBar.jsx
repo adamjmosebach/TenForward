@@ -50,9 +50,7 @@ export default function SideBar(props) {
                 <p className='profile-name'>{currentUser.username}</p>
                 <p className='profile-stats'>Rank: {rank}</p>
                   <p className='postsNum-display'>Posts: {postsNum ? postsNum : 0}</p>
-                <p className='profile-stats'>
-                  Division: {currentUser.division}
-                </p>
+                {currentUser.division && <p className='profile-stats'>Division: {currentUser.division} </p>}
                 <div className='profile-image-container'>
                   <img
                     src={currentUser.img_url ? currentUser.img_url : starfleetInsignia}
