@@ -1,5 +1,9 @@
 # TenForward
 
+### Deployed site at (https://tenforward.netlify.app/)[https://tenforward.netlify.app/]
+### Backend at (https://tenforward-api.herokuapp.com/)[https://tenforward-api.herokuapp.com/]
+- /users, /posts, /comments
+
 <br>
 
 - [Overview](#overview)
@@ -40,6 +44,11 @@
 
 <br>
 
+### Tech Stack
+
+React front end
+Ruby on Rails back end
+
 ### Libraries and Dependencies
 
 |Library/Dependency| Description                                |
@@ -53,61 +62,36 @@
 
 ## Client (Front End)
 
-### Wireframes
+### Original Wireframes
 
 ### Desktop
 
+[Landing Page](https://i.imgur.com/GoVXK4r.png)
 
-Landing Page
+[Register](https://i.imgur.com/wIGHNnd.png)
 
-![Landing Page](https://i.imgur.com/GoVXK4r.png)
+[Create Post](https://i.imgur.com/gESF7LE.png)
 
-Register
+[Post Detail](https://i.imgur.com/j92eEQ2.png)
 
-![Register](https://i.imgur.com/wIGHNnd.png)
+[Update/Delete](https://i.imgur.com/KvowWex.png)
 
-Create Post
-
-![Create Post](https://i.imgur.com/gESF7LE.png)
-
-Post Detail
-
-![Post Detail](https://i.imgur.com/j92eEQ2.png)
-
-Update/Delete
-
-![Update/Delete](https://i.imgur.com/KvowWex.png)
-
-Profile
-
-![Profile](https://i.imgur.com/axhXIi2.png)
+[Profile](https://i.imgur.com/axhXIi2.png)
 
 
 ### Mobile
 
-Landing Page
+[Landing Page](https://i.imgur.com/h3oqD87.png)
 
-![Landing Page](https://i.imgur.com/h3oqD87.png)
+[Register](https://i.imgur.com/fm9uRXC.png)
 
-Register
+[Create Post](https://i.imgur.com/SmvhsPF.png)
 
-![Register](https://i.imgur.com/fm9uRXC.png)
+[Post Detail](https://i.imgur.com/bM4HnAu.png)
 
-Create Post
+[Update/Delete](https://i.imgur.com/wAdBwe8.png)
 
-![Create Post](https://i.imgur.com/SmvhsPF.png)
-
-Post Detail
-
-![Post Detail](https://i.imgur.com/bM4HnAu.png)
-
-Update/Delete
-
-![Update/Delete](https://i.imgur.com/wAdBwe8.png)
-
-Profile
-
-![Profile](https://i.imgur.com/A66ngvG.png)
+[Profile](https://i.imgur.com/A66ngvG.png)
 
 
 
