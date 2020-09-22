@@ -32,7 +32,7 @@ export default function EditPost(props) {
 
   if (formData && currentUser && currentUser.id === formData.user_id) {
     return (
-      <div>
+      <div className='edit-post-div'>
         <form
           className='create-edit-post-form edit-post-form'
           onSubmit={(e) => {

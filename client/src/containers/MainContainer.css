@@ -10,7 +10,7 @@
 @media screen and (max-width: 426px) {
   .main-container {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 91.5vh;
     margin-top: 25vw;
   }
 }
