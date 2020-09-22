@@ -1,8 +1,7 @@
 # TenForward
 
-### Deployed site at (https://tenforward.netlify.app/)[https://tenforward.netlify.app/]
-### Backend at (https://tenforward-api.herokuapp.com/)[https://tenforward-api.herokuapp.com/]
-- /users, /posts, /comments
+### Deployed site at https://tenforward.netlify.app/
+### Backend at https://tenforward-api.herokuapp.com/ -> /users, /posts, /comments
 
 <br>
 
@@ -188,7 +187,7 @@ src
 
 ## Post-MVP
 
-#### - Every few posts, the user increases in Starfleet rank
+- Every few posts, the user increases in Starfleet rank
 - Each post could be associated with a specific category/hashtag
 - View posts by category/hashtag
 - View all posts by a specific user
