@@ -114,14 +114,19 @@ export default function EditProfile(props) {
           </div>
           <button className='red-submit'>Update</button>
         </form>
-        <div className='mobile-profile-display'>
+        {/* <div className='mobile-profile-display'>
           <div className='mobile-profile-pic-container'>
             <img src={currentUser.img_url} className='mobile-profile-pic' />
           </div>
           <div className='mobile-profile-info'>
-
+            <div className='mobile-profile-info-details'>
+              <p className='mobile-prof-stat'>Name: {currentUser.username}</p>
+              <p className='mobile-prof-stat'>Rank:</p>
+              <p className='mobile-prof-stat'></p>
+              <p className='mobile-prof-stat'></p>
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   } else {
