@@ -1,3 +1,9 @@
 .create-post-div {
   margin-top: 2vw;
 }
+
+@media screen and (max-width: 426px) {
+  .create-post-div {
+    margin-top: 10vw;
+  }
+}
