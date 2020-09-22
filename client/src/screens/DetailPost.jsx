@@ -39,7 +39,7 @@ export default function DetailPost(props) {
     history.push(`/posts/${thePost.id}`);
   };
 
-  if (thePost) {
+  if (thePost && author) {
     return (
       <div className='post-detail-div'>
         {/* <h3>Post Detail</h3>
