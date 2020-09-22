@@ -28,7 +28,7 @@ export default function CommentCard(props) {
     });
   };
 
-  if (currentUser && thePost && comment) {
+  if (thePost && comment) {
     if (editMode) {
       return (
         <div className='comment-card'>
@@ -50,7 +50,7 @@ export default function CommentCard(props) {
       return (
         <div className='comment-card'>
           <p className='show-comment-content'>{comment.content}</p>
-          {comment.user_id === currentUser.id && (
+          {currentUser && comment.user_id === currentUser.id && (
             <div className='comment-buttons'>
               <button className='comment-button-delete' onClick={commentDelete}>
                 Delete
