@@ -9,6 +9,7 @@ export default function DetailPost(props) {
   const { currentUser } = props;
   const { id } = useParams();
   const [thePost, setThePost] = useState(null);
+  const [author, setAuthor] = useState(null)
   const [newComment, setNewComment] = useState('');
   const history = useHistory();
 
@@ -17,6 +18,7 @@ export default function DetailPost(props) {
       const matchingPost = await getOnePost(id);
       console.log('in Detail, matchingPost = ', matchingPost);
       setThePost(matchingPost);
+      setAuthor(matchingPost.user.username)
     };
     fetchOnePost(id);
   }, []);
@@ -37,7 +39,7 @@ export default function DetailPost(props) {
     history.push(`/posts/${thePost.id}`);
   };
 
-  if (thePost && thePost.user) {
+  if (thePost) {
     return (
       <div className='post-detail-div'>
         {/* <h3>Post Detail</h3>
@@ -78,7 +80,7 @@ export default function DetailPost(props) {
           <button className='post-comment-submit'>Post Your Comment</button>
           {/* </Link> */}
         </form>
-        {thePost.user && <div className='detail-author'>post by: {thePost.user.username}</div>}
+        {thePost.user && <div className='detail-author'>post by: {author}</div>}
       </div>
     );
   } else {
