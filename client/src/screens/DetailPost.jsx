@@ -17,8 +17,8 @@ export default function DetailPost(props) {
     const fetchOnePost = async (id) => {
       const matchingPost = await getOnePost(id);
       console.log('in Detail, matchingPost = ', matchingPost);
-      setAuthor(matchingPost.user.username)
       setThePost(matchingPost);
+      setAuthor(matchingPost.user.username)
       // console.log('DP-author = ',matchingPost.user.username)
     };
     fetchOnePost(id);
@@ -81,7 +81,7 @@ export default function DetailPost(props) {
           <button className='post-comment-submit'>Post Your Comment</button>
           {/* </Link> */}
         </form>
-        <div className='detail-author'>post by: {author}</div>
+        {author && <div className='detail-author'>post by: {author}</div>}
       </div>
     );
   } else {
