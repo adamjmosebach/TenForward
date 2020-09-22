@@ -11,7 +11,7 @@ export default function EditProfile(props) {
     password: '',
     img_url: '',
     division: '',
-    rank: '',
+    // rank: '',
   });
 
   useEffect(() => {
@@ -49,7 +49,11 @@ export default function EditProfile(props) {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            updateProfileSubmit(currentUser.id, formData);
+            if (password) {
+              updateProfileSubmit(currentUser.id, formData);
+            } else {
+              alert('You must confirm your password')
+            }
           }}
           >
           <h3 className='form-heading'>Edit Profile</h3>
