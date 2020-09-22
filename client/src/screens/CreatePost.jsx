@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Forms.css';
+import './CreatePost.css'
 
 export default function CreatePost(props) {
   const { setFromCreate, currentUser, createPostSubmit } = props;
@@ -22,7 +23,7 @@ export default function CreatePost(props) {
   };
 
   return (
-    <div>
+    <div className='create-post-div'>
       <form
         className='create-edit-post-form'
         onSubmit={(e) => {
