@@ -32,7 +32,6 @@ function App() {
       } else {
         setCurrentUser(userData);
       }
-      // history.push('/');
     };
     handleVerify();
   }, []);
@@ -43,23 +42,14 @@ function App() {
     }
   }, [currentUser]);
 
-  // useEffect(() => {
-  //   console.log('postsNum in App.js = ',postsNum)
-  // }, [postsNum])
-
   const loginSubmit = async (loginData) => {
     try {
       const userData = await loginUser(loginData);
-      console.log('llll', userData);
-      // if (userData) {
       const userDataPlusPosts = await getOneUser(userData.id);
       setCurrentUser(userDataPlusPosts);
       fromCreate ? history.push('/posts/create') : history.push('/');
     } catch (err) {
-      // } else {
-      //   alert('Login Failed')
-      // }
-      alert(err)
+      alert(err);
     }
   };
 
@@ -70,7 +60,7 @@ function App() {
       setCurrentUser(userDataPlusPosts);
       fromCreate ? history.push('/posts/create') : history.push('/');
     } catch (err) {
-      alert(err)
+      alert(err);
     }
   };
 
@@ -80,7 +70,7 @@ function App() {
       setCurrentUser(userData);
       history.push('/');
     } catch (err) {
-      alert(err)
+      alert(err);
     }
   };
 
@@ -106,12 +96,6 @@ function App() {
           />
           <div className='allow-for-sidebar'></div>
           <Switch>
-            {/* <Route path='/login'>
-              <Login loginSubmit={loginSubmit} />
-            </Route>
-            <Route path='/register'>
-              <Register registerSubmit={registerSubmit} />
-            </Route> */}
             <Route path='/'>
               <MainContainer
                 currentUser={currentUser}

@@ -113,9 +113,9 @@ Profile
 
 ### Component Tree
 
-##### - Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q) -
+##### - Original Whimsical Diagram can be found [here](https://whimsical.com/N9mLQiu1e5EMegzFjmUG6Q) -
 
-![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png)
+<!-- ![Whimsical Diagram](https://i.imgur.com/RPaaFCh.png) -->
 
 ### Component Hierarchy
 
@@ -123,31 +123,29 @@ Profile
 
 src
 |__ assets/
-      |__ fonts
       |__ images
 |__ components/
-      |__ NavBar.jsx
-      |__ SideBar.jsx
-      |__ ProfileCard.jsx
+      |__ CommentCard.jsx
       |__ PostCard.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout.jsx
+      |__ SideBar.jsx
+|__ screens/
+      |__ CreatePost.jsx
+      |__ DetailPost.jsx
+      |__ EditPost.jsx
+      |__ EditProfile
+      |__ Login.jsx
+      |__ Posts.jsx
+      |__ Register.jsx
 |__ services/
       |__ api-config.js
       |__ auth.js
-      |__ users.js
-      |__ posts.js
       |__ comments.js
-|__ screens/
-      |__ Landing.jsx
-      |__ CreatePost.jsx
-      |__ PostDetail.jsx
-      |__ EditDeletePost.jsx
-      |__ Login.jsx
-      |__ Register.jsx
-      |__ Profile.jsx
-|__ layouts/
-      |__ Layout.jsx
-|__ containers/
-      |__ MainContainer.jsx
+      |__ posts.js
+      |__ users.js
 |__ App.js
 |__ index.js
       
@@ -157,37 +155,40 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    NavBar   | functional |   n   |   n   | Name of site, logo, 'create post' button               |
-|  SideBar  | functional |   y   |   n   | Either Guinan or your profile       |
-|   MainContainer    |   functional    |   y   |   n   | Axios call, passing down props     |
-|   ProfileCard    |   functional    |   n   |   y   | Displays your profile information     |
-| PostCard | functional |   n   |   y   | Post information and comments                |
-|    Landing    | functional |   n   |   y   | Displays all posts and comments |
-|    CreatePost    | functional |   y   |   n   | Create a post |
-|    PostDetail    | functional |   y   |   n   | Details on a specific post |
-|    EditDeletePost    | functional |   y   |   y   | Edit or delete a post |
-|    Login    | functional |   y   |   n   | Log into your profile |
-|    Register    | functional |   y   |   n   | Register for the site |
+|  CommentCard   | functional |   y   |   y   | Basic layout for a comment            |
+|  PostCard   | functional |   n   |   y   | Basic layout of a post              |
+| MainContainer    |   functional    |   y   |   y   | Axios call for all posts, functions for manipulating posts, passing down props     |
+|    Layout  | functional |   n   |   y   | Will conitionally display Guinan/Login/Register or your profile info/edit profile/logout       |
+|    SideBar  | functional |   y   |   y   | Either Guinan or your profile       |
+|    CreatePost    | functional |   y   |   y   | Create a post |
+|    DetailPost    | functional |   y   |   y   | Details on a specific post |
+|    EditPost    | functional |   y   |   y   | Edit or delete a post |
+|    EditProfile | functional |   y   |   y   | Post information and comments                |
+|    Login    | functional |   y   |   y   | Log into your profile |
+|    Posts    | functional |   n   |   y   | Displays all posts and comments |
+|    Register    | functional |   y   |   y   | Register for the site |
+|    App    | functional |   y   |   n   | Register for the site |
 
 ### Time Estimates
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-|  Setup back end file structure   |     L   |     2 hrs      |     -     |    -    |
-| Nav    |    M     |     3 hrs      |    -     |    -   |
-| Screens    |    M     |     4 hrs      |     -    |    -    |
-| Back end CRUD    |    H     |     7 hrs      |    -    |    -    |
-|  Setup front end file structure   |    L     |     2 hrs      |    -     | -    |
-| Front end CRUD    |    H     |     6 hrs      |    -    |    -   |
-| Comments working    |    H     |     3.5 hrs      |     -    |   -   |
-| Auth   |    H     |     3 hrs      |     -     |    -   |
-| CSS    |    M     |     10 hrs      |    -     |   -   |
-| Responsive Design    |    M     |     4 hrs      |     -   |   -   |
+|  Setup back end file structure   |     L   |     2 hrs      |     1.5 hrs     |    1.5 hrs    |
+| Layout    |    M     |     3 hrs      |    2 hrs     |    2 hrs   |
+| Basic screen interaction     |    M     |     4 hrs      |     3.5 hrs    |    3.5 hrs   |
+| Back end CRUD    |    H     |     7 hrs      |   6 hrs    |    6 hrs    |
+|  Setup front end file structure   |    L     |     2 hrs      |    2 hrs     |  2 hrs    |
+| Front end CRUD    |    H     |     6 hrs      |    11 hrs    |    11 hrs   |
+| Comments working    |    H     |     3.5 hrs      |     4 hrs    |   4 hrs   |
+| Auth   |    H     |     3 hrs      |     2 hrs     |    2 hrs   |
+| CSS    |    M     |     10 hrs      |    16 hrs     |   16 hrs   |
+| Responsive Design    |    M     |     4 hrs      |     5.5 hrs   |   5.5 hrs   |
+| *Increase Rank    |    L     |     1 hrs      |     4.5 hrs     |    4.5 hrs    |
 | *Implementing Categories    |    L     |     2 hrs      |     -     |   -   |
 | *Category View    |    L     |     2 hrs      |    -   |   -   |
-| *Increase Rank    |    L     |     1 hrs      |     -     |    -    |
 | *Views by User    |    L     |     2 hrs      |     -   |    -    |
-| TOTAL               |   *P-MVP: 7 hrs       |     MVP: 44.5 hrs      |     -     |    -    |
+| Troubleshooting    |    M     |     -      |     12 hrs   |    12 hrs    |
+| TOTAL               |   *P-MVP: 7 hrs       |     MVP: 44.5 hrs      |     70 hrs    |    70 hrs    |
 
 <br>
 
@@ -195,7 +196,7 @@ src
 
 ### ERD Model
 
-![ERD](https://i.imgur.com/7R3ojgX.png)
+![ERD](https://i.imgur.com/CCkSVm3.png)
 
 <br>
 
@@ -203,7 +204,7 @@ src
 
 ## Post-MVP
 
-- Every few posts, the user increases in Starfleet rank
+#### - Every few posts, the user increases in Starfleet rank
 - Each post could be associated with a specific category/hashtag
 - View posts by category/hashtag
 - View all posts by a specific user
@@ -216,8 +217,12 @@ src
 
 ## Code Showcase
 
-> I will use this section to include a brief code snippet of functionality that I am proud of and a brief description.
+```
+fromCreate ? history.push('/posts/create') : history.push('/');
+```
+It's so simple, but I'm really proud of it.  When a user who is not logged in clicks 'Create Post', they are taken to the login page _and_ a state variable is set, indicating that the user got to the login page via the 'Create Post' button. Once the user logs in, instead of being redirected to the main page as normal they are taken through to the create page like they originally wanted, where the state variable is reset.
 
 ## Code Issues & Resolutions
 
-> I will use this section to list of all major issues/changes encountered and their resolution.
+- Upon adding a column to the db late in the project, the app worked on localhost but not on heroku. After hours of troubleshooting, the answer was that the new column was type 'text'. The solution was changing it to type 'string'
+- Mobile development & form styling presented challenges to be overcome with time and patience
