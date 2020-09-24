@@ -33,6 +33,9 @@
 }
 
 @media screen and (max-width: 426px) {
+  .edit-post-div {
+    margin-top: 10vw;
+  }
   .edit-post-buttons {
     align-items: baseline;
   }
