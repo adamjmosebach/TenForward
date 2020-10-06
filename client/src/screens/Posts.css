@@ -21,7 +21,8 @@
 }
 .loading {
   color: white;
-  z-index: 10
+  z-index: 10;
+  position: absolute;
 }
 
 @media screen and (max-width: 426px) {
