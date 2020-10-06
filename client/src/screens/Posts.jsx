@@ -17,10 +17,7 @@ export default function Posts(props) {
     );
   } else {
     return (
-      <img
-        src={`url('https://i.gifer.com/TpfN.gif')`}
-        alt='Federation of Planets'
-      />
+      <div className='loading-federation'></div>
     );
   }
 }
