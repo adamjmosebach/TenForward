@@ -20,9 +20,10 @@ export default function Posts(props) {
   } else {
     return (
       // <div className='loading-federation' style={{ backgroundImage: `url(${logoLoading})` }}></div>
-      <div className='loading-div'>
-        <img src={logoLoading} className='loading-gif' />
-      </div>
+      // <div className='loading-div'>
+      //   <img src={logoLoading} className='loading-gif' />
+      // </div>
+      <h1 className='loading'>Loading...</h1>
     );
   }
 }
