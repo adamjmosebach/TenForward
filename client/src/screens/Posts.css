@@ -3,13 +3,13 @@
   flex-direction: column-reverse;
   align-content: center;
 }
-.loading-federation {
+/* .loading-federation {
   background-size: cover;
   width: 50vw;
   height: 50vh;
   opacity: .65;
-  /* transform: scale(50vw); */
-}
+  /* transform: scale(50vw); 
+} */
 .loading-div {
   width: 25vw;
   opacity: .5;
