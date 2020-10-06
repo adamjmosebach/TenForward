@@ -18,6 +18,6 @@ export default function Posts(props) {
   } else {
     return (
       <div className='loading-federation'></div>
-    );
+    ); 
   }
 }
