@@ -24,7 +24,7 @@ export default function MainContainer(props) {
     registerSubmit,
     setPostsNum,
   } = props;
-  const [posts, updatePosts] = useState([]);
+  const [posts, updatePosts] = useState(['loading']);
   const history = useHistory();
 
   useEffect(() => {

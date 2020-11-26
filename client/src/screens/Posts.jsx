@@ -8,7 +8,16 @@ import './Posts.css';
 export default function Posts(props) {
   const { posts, currentUser } = props;
 
-  if (posts.length) {
+  if (posts === ['loading']) {
+    return (
+      // <div className='loading-federation' style={{ backgroundImage: `url(${logoLoading})` }}></div>
+      // <div className='loading-div'>
+      //   <img src={logoLoading} className='loading-gif' />
+      // </div>
+      // <img src={lcarsLoading2} alt='Loading' className='loading' />
+      <h1 className='loading'>Loading...</h1>
+    );
+  } else {
     return (
       <div>
         <div className='all-posts'>
@@ -17,15 +26,6 @@ export default function Posts(props) {
           ))}
         </div>
       </div>
-    );
-  } else {
-    return (
-      // <div className='loading-federation' style={{ backgroundImage: `url(${logoLoading})` }}></div>
-      // <div className='loading-div'>
-      //   <img src={logoLoading} className='loading-gif' />
-      // </div>
-      // <img src={lcarsLoading2} alt='Loading' className='loading' />
-      <h1 className='loading'>Loading...</h1>
     );
   }
 }
