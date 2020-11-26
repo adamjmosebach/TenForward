@@ -8,7 +8,7 @@ import './Posts.css';
 export default function Posts(props) {
   const { posts, currentUser } = props;
 
-  if (posts[0]) {
+  if (posts) {
     return (
       <div>
         <div className='all-posts'>
