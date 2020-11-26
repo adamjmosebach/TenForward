@@ -9,7 +9,7 @@ export default function Posts(props) {
   const { posts, currentUser, postsUpdated } = props;
 
   if (postsUpdated) {
-    return (
+    return <div className='loading'>It loaded fine.</div>;
       // <div>
       //   <div className='all-posts'>
       //     {posts.map((post) => (
@@ -17,8 +17,8 @@ export default function Posts(props) {
       //     ))}
       //   </div>
       // </div>
-      <div className='loading'>It loaded fine.</div>
-    );
+      
+   
   } else {
     return <div className='loading'>Loading...</div>;
   }
