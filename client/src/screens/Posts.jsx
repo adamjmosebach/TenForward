@@ -10,22 +10,16 @@ export default function Posts(props) {
 
   if (postsUpdated) {
     return (
-      <div>
-        <div className='all-posts'>
-          {posts.map((post) => (
-            <PostCard post={post} currentUser={currentUser} key={post.id} />
-          ))}
-        </div>
-      </div>
+      // <div>
+      //   <div className='all-posts'>
+      //     {posts.map((post) => (
+      //       <PostCard post={post} currentUser={currentUser} key={post.id} />
+      //     ))}
+      //   </div>
+      // </div>
+      <div className='loading'>It loaded fine.</div>
     );
   } else {
-    return (
-      // <div className='loading-federation' style={{ backgroundImage: `url(${logoLoading})` }}></div>
-      // <div className='loading-div'>
-      //   <img src={logoLoading} className='loading-gif' />
-      // </div>
-      // <img src={lcarsLoading2} alt='Loading' className='loading' />
-      <div className='loading'>Loading...</div>
-    );
+    return <div className='loading'>Loading...</div>;
   }
 }
