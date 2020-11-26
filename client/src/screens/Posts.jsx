@@ -9,7 +9,9 @@ export default function Posts(props) {
   const { posts, currentUser, postsUpdated } = props;
 
   if (postsUpdated) {
-    return <div className='loading'>It loaded fine.</div>;
+    return (
+      <div className='loading'>It loaded fine.</div>
+    );
       // <div>
       //   <div className='all-posts'>
       //     {posts.map((post) => (
