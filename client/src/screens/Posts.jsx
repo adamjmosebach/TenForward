@@ -8,7 +8,7 @@ import './Posts.css';
 export default function Posts(props) {
   const { posts, currentUser } = props;
 
-  if (posts) {
+  if (posts.length) {
     return (
       <div>
         <div className='all-posts'>
@@ -24,7 +24,7 @@ export default function Posts(props) {
       // <div className='loading-div'>
       //   <img src={logoLoading} className='loading-gif' />
       // </div>
-      <img src={lcarsLoading2} alt='Loading' className='loading'/>
+      <img src={lcarsLoading2} alt='Loading' className='loading' />
       // <h1 className='loading'>Loading...</h1>
     );
   }
