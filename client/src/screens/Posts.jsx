@@ -2,12 +2,13 @@ import React from 'react';
 import PostCard from '../components/PostCard';
 import logoLoading from '../assets/logoLoading.gif';
 import lcarsLoading from '../assets/lcarsLoading.gif';
+import lcarsLoading2 from '../assets/lcarsLoading2.gif';
 import './Posts.css';
 
 export default function Posts(props) {
   const { posts, currentUser } = props;
 
-  if (posts) {
+  if (posts[0]) {
     return (
       <div>
         <div className='all-posts'>
@@ -23,7 +24,8 @@ export default function Posts(props) {
       // <div className='loading-div'>
       //   <img src={logoLoading} className='loading-gif' />
       // </div>
-      <h1 className='loading'>Loading...</h1>
+      <img src={lcarsLoading2} alt='Loading' className='loading'/>
+      // <h1 className='loading'>Loading...</h1>
     );
   }
 }
