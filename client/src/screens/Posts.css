@@ -20,9 +20,11 @@
   height: 100%
 }
 .loading {
-  color: white;
+  /* color: white; */
   z-index: 10;
   position: absolute;
+  width: 30vw;
+  top: 5vw;
 }
 
 @media screen and (max-width: 426px) {
