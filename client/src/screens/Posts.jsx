@@ -15,7 +15,7 @@ export default function Posts(props) {
       //   <img src={logoLoading} className='loading-gif' />
       // </div>
       // <img src={lcarsLoading2} alt='Loading' className='loading' />
-      <h1 className='loading'>Loading...</h1>
+      <div className='loading'>Loading...</div>
     );
   } else {
     return (
