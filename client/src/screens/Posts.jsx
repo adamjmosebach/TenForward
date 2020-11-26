@@ -24,8 +24,8 @@ export default function Posts(props) {
       // <div className='loading-div'>
       //   <img src={logoLoading} className='loading-gif' />
       // </div>
-      <img src={lcarsLoading2} alt='Loading' className='loading' />
-      // <h1 className='loading'>Loading...</h1>
+      // <img src={lcarsLoading2} alt='Loading' className='loading' />
+      <h1 className='loading'>Loading...</h1>
     );
   }
 }
