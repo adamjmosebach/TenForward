@@ -8,7 +8,7 @@ import './Posts.css';
 export default function Posts(props) {
   const { posts, currentUser } = props;
 
-  if (posts === ['loading']) {
+  if (posts.length === 1) {
     return (
       // <div className='loading-federation' style={{ backgroundImage: `url(${logoLoading})` }}></div>
       // <div className='loading-div'>
