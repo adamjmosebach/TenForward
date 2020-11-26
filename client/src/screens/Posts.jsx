@@ -20,6 +20,6 @@ export default function Posts(props) {
       // <div className='loading'>It loaded fine.</div>
     );
   } else {
-    return <div className='loading'>Loading...</div>;
+    return <img src={lcarsLoading2} alt='Loading' className='loading' />;
   }
 }
