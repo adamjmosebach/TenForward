@@ -10,17 +10,15 @@ export default function Posts(props) {
 
   if (postsUpdated) {
     return (
-      <div className='loading'>It loaded fine.</div>
+      <div>
+        <div className='all-posts'>
+          {posts.map((post) => (
+            <PostCard post={post} currentUser={currentUser} key={post.id} />
+          ))}
+        </div>
+      </div>
+      // <div className='loading'>It loaded fine.</div>
     );
-      // <div>
-      //   <div className='all-posts'>
-      //     {posts.map((post) => (
-      //       <PostCard post={post} currentUser={currentUser} key={post.id} />
-      //     ))}
-      //   </div>
-      // </div>
-      
-   
   } else {
     return <div className='loading'>Loading...</div>;
   }
