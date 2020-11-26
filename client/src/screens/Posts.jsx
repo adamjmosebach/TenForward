@@ -6,9 +6,9 @@ import lcarsLoading2 from '../assets/lcarsLoading2.gif';
 import './Posts.css';
 
 export default function Posts(props) {
-  const { posts, currentUser } = props;
+  const { posts, currentUser, postsUpdated } = props;
 
-  if (posts[0] !== 'loading') {
+  if (postsUpdated) {
     return (
       <div>
         <div className='all-posts'>
