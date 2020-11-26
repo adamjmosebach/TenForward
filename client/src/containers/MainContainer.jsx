@@ -24,13 +24,15 @@ export default function MainContainer(props) {
     registerSubmit,
     setPostsNum,
   } = props;
-  const [posts, updatePosts] = useState(['loading']);
+  const [posts, updatePosts] = useState([]);
+  const [postsUpdated, updatePostsUpdated] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
     const fetchPosts = async () => {
       const postsArr = await getAllPosts();
       updatePosts(postsArr);
+      updatePostsUpdated(true);
     };
     fetchPosts();
   }, []);
@@ -96,7 +98,7 @@ export default function MainContainer(props) {
           />
         </Route>
         <Route path='/'>
-          <Posts posts={posts} currentUser={currentUser} />
+          <Posts posts={posts} currentUser={currentUser} postsUpdated={postsUpdated}/>
         </Route>
       </Switch>
     </div>
