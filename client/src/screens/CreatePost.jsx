@@ -55,7 +55,7 @@ export default function CreatePost(props) {
           />
         </div>
         <div className='label-input'>
-          <label htmlFor='create-post-img_url'>URL of Image:</label>
+          <label htmlFor='create-post-img_url'>Image URL:</label>
           <input
             type='text'
             name='img_url'
